@@ -1,0 +1,48 @@
+<?php
+/*=======================================================================
+| MakeCMS - Sistema avançado de Administração de CMS
+| #######################################################################
+| Copyright (c) 2010, Lucas Torres and Meth0d
+| #######################################################################
+| Este programa é um Free Software aonde você pode editar os conteúdos
+| com os direitos autorais do editor.
+| #######################################################################
+| Contato:
+|         lucastorres.ce@gmail.com / sonhador_br@live.com
+\======================================================================*/
+
+require_once "global.php";
+
+$cmd = '';
+
+if (isset($_GET['cmd']))
+{
+	$cmd = $_GET['cmd'];
+}
+
+switch (strtolower($cmd))
+{
+	case 'mytagslist':
+	
+		if (LOGGED_IN)
+		{
+			$tpl->Init();
+			$taglist = new Template('comp-taglist');
+			$taglist->SetParam('habbletmode', true);
+			$tpl->AddTemplate($taglist);
+			$tpl->Output();
+		}
+		
+		break;
+		
+	case 'proxy':
+	
+		$tpl->Init();
+		$tagcloud = new Template('habblet-tagcloud');
+		$tpl->AddTemplate($tagcloud);
+		$tpl->Output();
+	
+		break;
+}
+	
+?>

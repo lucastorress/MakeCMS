@@ -1,0 +1,21 @@
+<?php
+/*=======================================================================
+| StageCMS - Sistema avançado de Administração de CMS
+| #######################################################################
+| Copyright (c) 2010, Geek and Meth0d
+| #######################################################################
+| Este programa é um Free Software aonde você pode editar os conteúdos
+| com os direitos autorais do editor.
+| #######################################################################
+| Contato:                                       Divirta-se com a CMS ;D
+|         rafa95123@hotmail.com
+\======================================================================*/
+
+if (!defined('UBER') || !UBER)
+{
+	exit;
+}
+
+dbquery("UPDATE users SET daily_respect_points = '5'");
+
+?>
