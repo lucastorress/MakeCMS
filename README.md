@@ -16,7 +16,7 @@
 - [Sulake](https://www.sulake.com/)
 - Every who helps with ideas
 
-:warning: <p style="font-size: 10px">If I forgot someone, open a issue and I will add.</p>
+<p style="font-size: 10px">:warning: If I forgot someone, open a issue and I will add.</p>
 
 ## 🔥 Setup
 
