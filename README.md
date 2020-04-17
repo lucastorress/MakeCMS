@@ -6,7 +6,7 @@
   MakeCMS
 </h3>
 
-<p align="center">A content management system for Habbo retro based on UberCMS by Meth0d</p>
+<p align="center">A content management system for Habbo retro based on UberCMS</p>
 
 ## 👨🏼‍💻 Credits
 
@@ -36,3 +36,6 @@ After the merge of your pull request is done, you can delete your branch.
 ## 📝 License
 
 This project is under a GNU General Public License. See the file [LICENSE](LICENSE.md) for more details.
+
+---
+:computer: :robot: 2011
