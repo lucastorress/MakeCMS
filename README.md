@@ -8,6 +8,20 @@
 
 <p align="center">A content management system for Habbo retro based on UberCMS</p>
 
+## 📸 Screenshots
+
+### ME
+<img alt="Page ME" src="https://github.com/lucastorress/MakeCMS/blob/master/github/Me.png?raw=true" width="400px" />
+
+### Credits
+<img alt="Page Credits" src="https://github.com/lucastorress/MakeCMS/blob/master/github/Credits.png?raw=true" width="400px" />
+
+### Staff
+<img alt="Page Staff" src="https://github.com/lucastorress/MakeCMS/blob/master/github/Staff.png?raw=true" width="400px" />
+
+### Top Status
+<img alt="Page Top Status" src="https://github.com/lucastorress/MakeCMS/blob/master/github/Topstatus.png?raw=true" width="400px" />
+
 ## 👨🏼‍💻 Credits
 
 - [Meth0d](http://meth0d.org/)
@@ -38,4 +52,4 @@ After the merge of your pull request is done, you can delete your branch.
 This project is under a GNU General Public License. See the file [LICENSE](LICENSE.md) for more details.
 
 ---
-:computer: :robot: 2011
+:computer: Since 2011 :robot:
