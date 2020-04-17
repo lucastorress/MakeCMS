@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -44,7 +44,7 @@ if (isset($_GET['new']))
 
 if (isset($_GET['del']))
 {
-	fMessage('error', 'Você tem <b>certeza</b> que deseja deletar este item do catálogo ? Isto não pode ser revertido.<br /><a href="index.php?_cmd=ot-cata-items&realdel=' . $_GET['del'] . '&sq=' . $_GET['sq'] . '">SIM, DELETAR</a> - ou - <a href="index.php?_cmd=ot-cata-items">CANCELAR</a>');
+	fMessage('error', 'Vocï¿½ tem <b>certeza</b> que deseja deletar este item do catï¿½logo ? Isto nï¿½o pode ser revertido.<br /><a href="index.php?_cmd=ot-cata-items&realdel=' . $_GET['del'] . '&sq=' . $_GET['sq'] . '">SIM, DELETAR</a> - ou - <a href="index.php?_cmd=ot-cata-items">CANCELAR</a>');
 }
 
 if (isset($_GET['realdel']))
@@ -65,7 +65,7 @@ if (isset($_GET['edit']))
 	
 	if (mysql_num_rows($get) == 0)
 	{
-		fMessage('error', 'Opa ! Item inválido.');
+		fMessage('error', 'Opa ! Item invï¿½lido.');
 	}
 	else
 	{
@@ -113,7 +113,7 @@ if (isset($_GET['edit']))
 
 require_once "top.php";
 
-echo '<h1>Administrar itens do catálogo</h1>';
+echo '<h1>Administrar itens do catï¿½logo</h1>';
 
 $checkBlankItems = dbquery("SELECT id,page_id FROM catalog_items WHERE item_ids = '1' AND catalog_name = ''");
 
@@ -121,18 +121,18 @@ if (mysql_num_rows($checkBlankItems) > 0)
 {
 	echo '<div style="margin: 5px; padding: 10px; border: 2px solid #000; color: darkred;">';
 	echo '<p>';
-	echo '<b>Aviso !</b> Se você deixar espaços em branco, poderá comprometer o banco de dados:<br />';
+	echo '<b>Aviso !</b> Se vocï¿½ deixar espaï¿½os em branco, poderï¿½ comprometer o banco de dados:<br />';
 	echo '<ul class="styled">';
 	
 	while ($item = mysql_fetch_assoc($checkBlankItems))
 	{
 		if (isset($_GET['edit']) && $item['id'] == $_GET['edit'])
 		{
-			echo '<li><i>Você está editando o item (ID #' . $item['id'] . ').</i></li>';
+			echo '<li><i>Vocï¿½ estï¿½ editando o item (ID #' . $item['id'] . ').</i></li>';
 		}
 		else
 		{
-			echo '<li><a href="index.php?_cmd=ot-cata-items&edit=' . $item['id'] . '" target="_self">Item (ID #' . $item['id'] . ') na página ' . $item['page_id'] . '</a> (or <a href="index.php?_cmd=ot-cata-items&del=' . $item['id'] . '">Deletar</a>)</li>';
+			echo '<li><a href="index.php?_cmd=ot-cata-items&edit=' . $item['id'] . '" target="_self">Item (ID #' . $item['id'] . ') na pï¿½gina ' . $item['page_id'] . '</a> (or <a href="index.php?_cmd=ot-cata-items&del=' . $item['id'] . '">Deletar</a>)</li>';
 		}
 	}
 	
@@ -144,7 +144,7 @@ if (mysql_num_rows($checkBlankItems) > 0)
 if ($data != null)
 {
 	echo '<hr /><br />';
-	echo '<small><b>Editando item do catálogo</b></small>';
+	echo '<small><b>Editando item do catï¿½logo</b></small>';
 	echo '<h2><b>' . $data['catalog_name'] . '</b></h2><br />';
 	echo '<form method="post" action="index.php?_cmd=ot-cata-items&edit=' . $data['id'] . '">';
 	
@@ -190,17 +190,17 @@ else
 
 		$getPages = dbquery("SELECT * FROM catalog_items WHERE catalog_name LIKE '%" . $_POST['search-query'] . "%' OR id = '" . $_POST['search-query'] . "' OR item_ids = '" . $_POST['search-query'] . "' OR page_id = '" . $_POST['search-query'] . "' ORDER BY item_ids ASC");					
 
-		echo '<a href="index.php?_cmd=ot-cata-items&new"><b>Gerado novo item de catálogo</b></a><br /><br />';
+		echo '<a href="index.php?_cmd=ot-cata-items&new"><b>Gerado novo item de catï¿½logo</b></a><br /><br />';
 		
 		echo '<table width="100%" border="1" style="text-align: center;">
 		<thead style="font-weight: bold; font-size: 110%;">
 			<td>ID</td>
-			<td>ID da página</td>
-			<td>Definição</td>
+			<td>ID da pï¿½gina</td>
+			<td>Definiï¿½ï¿½o</td>
 			<td>Nome</td>
 			<td>Valor</td>
 			<td>Quantidade</td>
-			<td>Opções</td>
+			<td>Opï¿½ï¿½es</td>
 		</thead>';
 
 		while ($page = mysql_fetch_assoc($getPages))
@@ -224,7 +224,7 @@ else
 	}
 }
 
-echo '<a href="index.php?_cmd=ot-cata-items&new"><b>Gerado novo item do catálogo</b></a>';
+echo '<a href="index.php?_cmd=ot-cata-items&new"><b>Gerado novo item do catï¿½logo</b></a>';
 
 echo '</div>
 </div>';

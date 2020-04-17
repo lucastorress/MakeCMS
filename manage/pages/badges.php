@@ -1,14 +1,19 @@
 <?php
 /*=======================================================================
-| WareCMS - Sistema avançado de Administração de CMS
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Lucas Reis & Dcr-Host
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
-| Este programa é um FreeSoftware aonde você pode editar os conteúdos
-| com os direitos autorais do editor.
+| This program is free software: you can redistribute it and/or modify
+| it under the terms of the GNU General Public License as published by
+| the Free Software Foundation, either version 3 of the License, or
+| (at your option) any later version.
 | #######################################################################
-| Este programa foi editado traduzido por Lucas Reis, créditos totais
-| para Meth0d, autor original do programa.
+| This program is distributed in the hope that it will be useful,
+| but WITHOUT ANY WARRANTY; without even the implied warranty of
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+| GNU General Public License for more details.
 \======================================================================*/
 
 if (!defined('IN_HK') || !IN_HK)
@@ -48,17 +53,17 @@ else if (isset($_POST['usrsearch']))
 	}	
 	else
 	{
-		fMessage('error', 'Usuário não encontrado !');
+		fMessage('error', 'Usuï¿½rio nï¿½o encontrado !');
 	}
 }
 
 require_once "top.php";			
 
-echo '<h1>Administrar emblemas dos usuários</h1>';
+echo '<h1>Administrar emblemas dos usuï¿½rios</h1>';
 
 if ($data == null)
 {
-	echo '<p><i>Usuário não definido ou errado.</i> Para editar o emblema de um usuário, procure abaixo.</p>';
+	echo '<p><i>Usuï¿½rio nï¿½o definido ou errado.</i> Para editar o emblema de um usuï¿½rio, procure abaixo.</p>';
 	echo '<Br />';
 	echo '<p><form method="post">';
 	echo 'Por UID: <input id="uidval" type="text" size="5" name="uid">&nbsp; <input type="button" value="Ok" onclick="window.location = \'index.php?_cmd=badges&u=\' + document.getElementById(\'uidval\').value;"><br />';
@@ -83,16 +88,16 @@ else
 		echo '<b>Emblema entregue !</b>';
 	}
 
-	echo '<h2>Editando emblemas: ' . $data['username'] . ' (<a href="index.php?_cmd=badges">Voltar para a busca do usuário</a>)</h2>';
+	echo '<h2>Editando emblemas: ' . $data['username'] . ' (<a href="index.php?_cmd=badges">Voltar para a busca do usuï¿½rio</a>)</h2>';
 	$getBadges = dbquery("SELECT badge_id,badge_slot FROM user_badges WHERE user_id = '" . $data['id'] . "'");
 	
 	echo '<Br /><table border="1">
 	<thead>
 	<tr>
 		<td>Imagem</td>
-		<td>Código do emblema</td>
+		<td>Cï¿½digo do emblema</td>
 		<td>Status</td>
-		<td>Definição</td>
+		<td>Definiï¿½ï¿½o</td>
 		<td>Controles</td>
 	</tr>
 	</thead>';
@@ -106,7 +111,7 @@ else
 		
 		if ($b['badge_slot'] == 0)
 		{
-			echo 'Não equipado';
+			echo 'Nï¿½o equipado';
 		}
 		else
 		{
@@ -134,7 +139,7 @@ else
 		}
 		else
 		{
-			echo '<i>(Nenhuma descrição definida)</i><br />';
+			echo '<i>(Nenhuma descriï¿½ï¿½o definida)</i><br />';
 		}		
 		
 		echo '</a></td>';

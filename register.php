@@ -1,14 +1,19 @@
 <?php
 /*=======================================================================
-| MakeCMS - Sistema avançado de Administração de CMS
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Lucas Torres and Meth0d
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
-| Este programa é um Free Software aonde você pode editar os conteúdos
-| com os direitos autorais do editor.
+| This program is free software: you can redistribute it and/or modify
+| it under the terms of the GNU General Public License as published by
+| the Free Software Foundation, either version 3 of the License, or
+| (at your option) any later version.
 | #######################################################################
-| Contato:
-|         lucastorres.ce@gmail.com / sonhador_br@live.com
+| This program is distributed in the hope that it will be useful,
+| but WITHOUT ANY WARRANTY; without even the implied warranty of
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+| GNU General Public License for more details.
 \======================================================================*/
 
 require_once "global.php";
@@ -65,7 +70,7 @@ switch($_GET['stap'])
 		if (!is_numeric($bday_day) || !is_numeric($bday_month) || !is_numeric($bday_year) || $bday_day <= 0 || $bday_day > 31 ||
 			$bday_month <= 0 || $bday_month > 12 || $bday_year < 1900 || $bday_year > 2010)
 		{
-			$errors = "Por favor insira uma data válida de nascimento";
+			$errors = "Por favor insira uma data vï¿½lida de nascimento";
 			
 		}
 		else if(!empty($gender))
@@ -88,7 +93,7 @@ switch($_GET['stap'])
 	
 	case "3":
 		if (!isset($_SESSION['jjp']['register'][1]))
-			header("Location: " . WWW . "/quickregister/start/error/Você deve fazer isso primeiro passo antes de prosseguir");
+			header("Location: " . WWW . "/quickregister/start/error/Vocï¿½ deve fazer isso primeiro passo antes de prosseguir");
 		else if (isset($_SESSION['jjp']['register'][2]))
 			header("Location: " . WWW . "/quickregister/captcha");
 		
@@ -107,23 +112,23 @@ switch($_GET['stap'])
 		}
 		else if ($users->IsNameTaken($name))
 		{
-			$errors = "Esse nome já está em uso";
+			$errors = "Esse nome jï¿½ estï¿½ em uso";
 		}
 		else if ($users->IsNameBlocked($name))
 		{
-			$errors = "Esse nome está bloqueado pela equipe.";
+			$errors = "Esse nome estï¿½ bloqueado pela equipe.";
 		}
 		else if (!$users->IsValidName($name))
 		{
-			$errors = "Este nome não é válido";
+			$errors = "Este nome nï¿½o ï¿½ vï¿½lido";
 		}		
 		else if (!$users->IsValidEmail($email))
 		{
-			$errors = "Não é um endereço de e-mail válido";
+			$errors = "Nï¿½o ï¿½ um endereï¿½o de e-mail vï¿½lido";
 		}
 		else if ($pass1 <> $pass2 and strlen($pass1) < 6)
 		{
-			$errors = "As senhas não são iguais nem muito curto";
+			$errors = "As senhas nï¿½o sï¿½o iguais nem muito curto";
 		}
 		else if (isset($_POST['bean_termsOfServiceSelection']))
 		{
@@ -136,7 +141,7 @@ switch($_GET['stap'])
 		}
 		else
 		{
-			$errors = "Aceitar os Termos de serviço";
+			$errors = "Aceitar os Termos de serviï¿½o";
 		}
 		
 		header("Location: " . WWW . "/quickregister/email_password/error/".$errors);
@@ -145,9 +150,9 @@ switch($_GET['stap'])
 		
 	case "5":
 		if (!isset($_SESSION['jjp']['register'][1]))
-			header("Location: " . WWW . "/quickregister/start/error/Você deve fazer isso primeiro passo antes de prosseguir");
+			header("Location: " . WWW . "/quickregister/start/error/Vocï¿½ deve fazer isso primeiro passo antes de prosseguir");
 		else if (!isset($_SESSION['jjp']['register'][2]))
-			header("Location: " . WWW . "/quickregister/email_password/error/Você deve fazer isso primeiro passo antes de prosseguir");
+			header("Location: " . WWW . "/quickregister/email_password/error/Vocï¿½ deve fazer isso primeiro passo antes de prosseguir");
 	
 	$tpl->SetParam('recaptcha_html', recaptcha_get_html("6Le-aQoAAAAAABnHRzXH_W-9-vx4B8oSP3_L5tb0"));
 	$tpl->AddGeneric('page-register-3');
@@ -158,7 +163,7 @@ switch($_GET['stap'])
 							
 		if (!$resp->is_valid)
 		{
-			$errors = "Captcha está incorreto";
+			$errors = "Captcha estï¿½ incorreto";
 		}	
 		else
 		{

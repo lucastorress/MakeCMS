@@ -1,14 +1,19 @@
 <?php
 /*=======================================================================
-| MakeCMS - Sistema avançado de Administração de CMS
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Lucas Torres and Meth0d
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
-| Este programa é um Free Software aonde você pode editar os conteúdos
-| com os direitos autorais do editor.
+| This program is free software: you can redistribute it and/or modify
+| it under the terms of the GNU General Public License as published by
+| the Free Software Foundation, either version 3 of the License, or
+| (at your option) any later version.
 | #######################################################################
-| Contato:
-|         lucastorres.ce@gmail.com / sonhador_br@live.com
+| This program is distributed in the hope that it will be useful,
+| but WITHOUT ANY WARRANTY; without even the implied warranty of
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+| GNU General Public License for more details.
 \======================================================================*/
 
 class HomesManager
@@ -36,7 +41,7 @@ class HomesManager
 		$home = HomesManager::GetHome($homeId);
 		
 		$home->AddItem('widget', 463, 39, 1, 'ProfileWidget', 'w_skin_defaultskin', 0);
-		$home->AddItem('stickie', 42, 48, 2, 'Olá e Seja Bem-Vindo a sua Home. No momento a ferramenta de editar a sua Home, ainda não esta disponivel mais Em breve em nossa versão mais recente, possivel haver o jeito de editar a sua Home ;)', 'n_skin_noteitskin', 0);
+		$home->AddItem('stickie', 42, 48, 2, 'Olï¿½ e Seja Bem-Vindo a sua Home. No momento a ferramenta de editar a sua Home, ainda nï¿½o esta disponivel mais Em breve em nossa versï¿½o mais recente, possivel haver o jeito de editar a sua Home ;)', 'n_skin_noteitskin', 0);
 		$home->AddItem('stickie', 120, 311, 3, 'Seja Bem-Vindo a sua Home!', 'n_skin_speechbubbleskin', 0);
 		$home->AddItem('sticker', 593, 11, 4, 's_sticker_arrow_down', '', 0);
 		$home->AddItem('sticker', 252, 12, 5, 's_paper_clip_1', '', 0);

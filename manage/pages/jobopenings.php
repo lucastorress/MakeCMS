@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@ if (isset($_GET['doDel']))
 	
 	if (mysql_affected_rows() >= 1)
 	{
-		fMessage('ok', 'Usuário deletado.');
+		fMessage('ok', 'Usuï¿½rio deletado.');
 	}
 	
 	header("Location: index.php?_cmd=jobopenings");
@@ -42,7 +42,7 @@ if (isset($_GET['doDel']))
 if (isset($_POST['n-name']) && strlen($_POST['n-name']) >= 1)
 {
 	dbquery("INSERT INTO site_app_openings (id,name,text_descr,text_reqs,text_duties) VALUES (NULL,'" . filter($_POST['n-name']) . "','" . filter($_POST['n-descr']) . "','" . filter($_POST['n-reqs']) . "','" . filter($_POST['n-duties']) . "')");
-	fMessage('ok', 'Usuário concluído !');
+	fMessage('ok', 'Usuï¿½rio concluï¿½do !');
 	header("Location: index.php?_cmd=jobopenings");
 	exit;
 }
@@ -50,7 +50,7 @@ if (isset($_POST['n-name']) && strlen($_POST['n-name']) >= 1)
 if (isset($_POST['edit']) && is_numeric($_POST['edit']))
 {
 	dbquery("UPDATE site_app_openings SET name = '" . filter($_POST['e-name']) . "', text_descr = '" . filter($_POST['e-descr']) . "', text_reqs = '" . filter($_POST['e-reqs']) . "', text_duties = '" . filter($_POST['e-duties']) . "' WHERE id = '" . intval($_POST['edit']) . "' LIMIT 1");
-	fMessage('ok', 'Usuários atualizados !');
+	fMessage('ok', 'Usuï¿½rios atualizados !');
 	header("Location: index.php?_cmd=jobopenings");
 	exit;	
 }
@@ -59,21 +59,21 @@ require_once "top.php";
 
 ?>			
 
-<h1>Usuários merecedores</h1>
+<h1>Usuï¿½rios merecedores</h1>
 
 <p>
-	Esta é uma ferramenta única para aqueles membros que estão fazendo o bem e contribuindo para o nosso hotel.</p>
+	Esta ï¿½ uma ferramenta ï¿½nica para aqueles membros que estï¿½o fazendo o bem e contribuindo para o nosso hotel.</p>
 
-<h2>Adicionar novo usuário</h2><br />
+<h2>Adicionar novo usuï¿½rio</h2><br />
 <form method="post">
 
-Usuário:<br />
+Usuï¿½rio:<br />
 <input type="text" maxlength="100" name="n-name"><br />
 <br />
-Descrição:<br />
+Descriï¿½ï¿½o:<br />
 <textarea name="n-descr" cols="50" rows="4"></textarea><br />
 <br />
-No que ele está ajudando ? Ele sabe mexer em nosso painel ?<br />
+No que ele estï¿½ ajudando ? Ele sabe mexer em nosso painel ?<br />
 <textarea name="n-reqs" cols="50" rows="4"></textarea><br />
 <br />
 Contato:<br />
@@ -100,17 +100,17 @@ while ($opening = mysql_fetch_assoc($get))
 	echo '&nbsp;(<a href="index.php?_cmd=jobopenings&doDel=' . $opening['id'] . '">Remover</a>)';
 	
 	echo '<div id="edit-' . $opening['id'] . '" style="display: none;">';
-	echo '<br /><h3>Editar o usuário</h3><br />';
+	echo '<br /><h3>Editar o usuï¿½rio</h3><br />';
 	
 	echo '<form method="post">
 	<input type="hidden" name="edit" value="' . $opening['id'] . '">
-	Usuário:<br />
+	Usuï¿½rio:<br />
 	<input type="text" maxlength="100" name="e-name" value="' . clean($opening['name']) . '"><br />
 	<br />
-	Descrição:<br />
+	Descriï¿½ï¿½o:<br />
 	<textarea name="e-descr" cols="50" rows="4">' . clean($opening['text_descr']) . '</textarea><br />
 	<br />
-	No que ele está ajudando ? Ele sabe mexer em nosso painel ?<br />
+	No que ele estï¿½ ajudando ? Ele sabe mexer em nosso painel ?<br />
 	<textarea name="e-reqs" cols="50" rows="4">' . clean($opening['text_reqs']) . '</textarea><br />
 	<br />
 	Contato:<br />

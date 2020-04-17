@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -45,11 +45,11 @@ if (!isset($_SESSION['OT_PAGE_CAT']))
 		echo '<form method="post">';
 		echo '<select name="OT_PAGE_CAT">';
 		echo '<option value="3">Furni Shop</option>';
-		echo '<option value="91">Páginas Staff</option>';
+		echo '<option value="91">Pï¿½ginas Staff</option>';
 		echo '<option value="4">Pixel shop</option>';
 		echo '<option value="6">Trax Shop</option>';
 		echo '<option value="5">Habbo Club</option>';		
-		echo '<option value="-1">Página inicial</option>';		
+		echo '<option value="-1">Pï¿½gina inicial</option>';		
 		echo '</select>';
 		echo '<input type="submit" value="Pronto">';
 		echo '</form>';
@@ -80,12 +80,12 @@ if (isset($_GET['new']))
 
 if (isset($_GET['del']))
 {
-	fMessage('error', 'Você tem <b>certeza</b> que deseja deletar esta página ? Isto não pode ser revertido.<br /><a href="index.php?_cmd=ot-pages&realdel=' . $_GET['del'] . '">SIM, DELETAR</a> - ou - <a href="index.php?_cmd=ot-pages">CANCELAR</a>');
+	fMessage('error', 'Vocï¿½ tem <b>certeza</b> que deseja deletar esta pï¿½gina ? Isto nï¿½o pode ser revertido.<br /><a href="index.php?_cmd=ot-pages&realdel=' . $_GET['del'] . '">SIM, DELETAR</a> - ou - <a href="index.php?_cmd=ot-pages">CANCELAR</a>');
 }
 
 if (isset($_GET['realdel']))
 {
-	fMessage('ok', 'Página deletada');
+	fMessage('ok', 'Pï¿½gina deletada');
 	dbquery("DELETE FROM catalog_pages WHERE id = '" . intval($_GET['realdel']) . "' AND parent_id = '" . $_SESSION['OT_PAGE_CAT'] . "' LIMIT 1");
 	header("Location: ./index.php?_cmd=ot-pages&");
 	exit;	
@@ -101,7 +101,7 @@ if (isset($_GET['edit']))
 	
 	if (mysql_num_rows($get) == 0)
 	{
-		fMessage('error', 'Opa ! Item inválido.');
+		fMessage('error', 'Opa ! Item invï¿½lido.');
 	}
 	else
 	{
@@ -167,12 +167,12 @@ if (isset($_POST['update-order']))
 		dbquery("UPDATE catalog_pages SET order_num = '" . intval($value) . "' WHERE id = '" . $id .  "' AND parent_id = '" . $_SESSION['OT_PAGE_CAT'] . "' LIMIT 1");
 	}
 	
-	fMessage('ok', 'Atualizar por ordem de página.');
+	fMessage('ok', 'Atualizar por ordem de pï¿½gina.');
 }
 
 require_once "top.php";
 
-echo '<h1>Administrar páginas do catálogo</h1>';
+echo '<h1>Administrar pï¿½ginas do catï¿½logo</h1>';
 
 echo '<br />Editing category: <b>' . mysql_result(dbquery("SELECT caption FROM catalog_pages WHERE id = '" . $_SESSION['OT_PAGE_CAT'] . "' LIMIT 1"), 0) . '</b> (<a href="index.php?_cmd=ot-pages&unsetCat">Change</a>)';
 echo '<br /><br /><hr /><br />';
@@ -203,7 +203,7 @@ if ($data != null)
 		echo 'name="' . $key . '" cols="50" rows="4">' . $value . '</textarea><br /><br />';
 	}
 	
-	echo '<input type="checkbox" name="gonew" value="y" checked>Criar e gerar outra página para colocar itens<br />';
+	echo '<input type="checkbox" name="gonew" value="y" checked>Criar e gerar outra pï¿½gina para colocar itens<br />';
 	echo '<input type="submit" value="Salvar">&nbsp;';
 	echo '<input type="button" value="Cancelar" onclick="window.location=\'index.php?_cmd=ot-pages&sq=' . $_GET['sq'] . '\';">';
 	echo '</form>';
@@ -212,7 +212,7 @@ if ($data != null)
 
 $getPages = dbquery("SELECT * FROM catalog_pages WHERE parent_id = '" . $_SESSION['OT_PAGE_CAT'] . "' ORDER BY order_num ASC");					
 
-echo '<a href="index.php?_cmd=ot-pages&new"><b>Nova página gerada</b></a><br /><br />';
+echo '<a href="index.php?_cmd=ot-pages&new"><b>Nova pï¿½gina gerada</b></a><br /><br />';
 
 echo '<table width="100%" border="1" style="text-align: center;">
 <thead style="font-weight: bold; font-size: 110%;">
@@ -222,7 +222,7 @@ echo '<table width="100%" border="1" style="text-align: center;">
 	<td>Ativado</td>
 	<td>Estrutura</td>
 	<td>Ordem</td>
-	<td>Opções</td>
+	<td>Opï¿½ï¿½es</td>
 </thead>
 <form method="post">';
 
@@ -239,7 +239,7 @@ while ($page = mysql_fetch_assoc($getPages))
 	</tr>';
 }
 
-echo '</table><br /><input type="submit" name="update-order" value="Salvar ordem da página"> ou <input type="button" value="Cancelar" onclick="location.reload(true);"></form><br /><br />';
+echo '</table><br /><input type="submit" name="update-order" value="Salvar ordem da pï¿½gina"> ou <input type="button" value="Cancelar" onclick="location.reload(true);"></form><br /><br />';
 
 echo '<a href="index.php?_cmd=ot-pages&new"><b>Editado !</b></a>';
 

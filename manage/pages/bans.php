@@ -1,14 +1,19 @@
 <?php
 /*=======================================================================
-| WareCMS - Sistema avançado de Administração de CMS
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Lucas Reis & Dcr-Host
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
-| Este programa é um FreeSoftware aonde você pode editar os conteúdos
-| com os direitos autorais do editor.
+| This program is free software: you can redistribute it and/or modify
+| it under the terms of the GNU General Public License as published by
+| the Free Software Foundation, either version 3 of the License, or
+| (at your option) any later version.
 | #######################################################################
-| Este programa foi editado traduzido por Lucas Reis, créditos totais
-| para Meth0d, autor original do programa.
+| This program is distributed in the hope that it will be useful,
+| but WITHOUT ANY WARRANTY; without even the implied warranty of
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+| GNU General Public License for more details.
 \======================================================================*/
 
 require_once "../inc/class.rooms.php";
@@ -73,7 +78,7 @@ if (isset($_POST['bantype']))
 	
 	if (strlen($value) <= 0 || strlen($reason) <= 0 || !is_numeric($length) || intval($length) < 600)
 	{
-		fMessage('error', 'Não deixe os espaços em branco !');
+		fMessage('error', 'Nï¿½o deixe os espaï¿½os em branco !');
 		header("Location: index.php?_cmd=bans");
 		exit;
 	}
@@ -92,7 +97,7 @@ require_once "top.php";
 <br />
 
 <p>
-	Esta ferramenta permite que você edite os banimento e também que possa banir algum usuário.
+	Esta ferramenta permite que vocï¿½ edite os banimento e tambï¿½m que possa banir algum usuï¿½rio.
 </p>
 
 <br />
@@ -111,7 +116,7 @@ require_once "top.php";
 <thead>
 <tr>
 	<td>Detalhes do banimento</td>
-	<td>Endereço de IP</td>
+	<td>Endereï¿½o de IP</td>
 	<td>Data Submetida</td>
 	<td>Responder e-mail</td>
 	<td>Plea</td>
@@ -158,13 +163,13 @@ while ($ban = mysql_fetch_assoc($getMyBans))
 <form method="post">
 
 Ban type:<br />
-<select name="bantype" onclick="onchange="if (this.value == 'ip') { document.getElementById('ban-value-heading').innerHTML = 'Endereço de IP'; } else { document.getElementById('ban-value-heading').innerHTML = 'Usuário'; }" onkeyup="onchange="if (this.value == 'ip') { document.getElementById('ban-value-heading').innerHTML = 'Endereço de IP'; } else { document.getElementById('ban-value-heading').innerHTML = 'Usuário'; }" onchange="if (this.value == 'ip') { document.getElementById('ban-value-heading').innerHTML = 'Endereço de IP'; } else { document.getElementById('ban-value-heading').innerHTML = 'Usuário'; }">
+<select name="bantype" onclick="onchange="if (this.value == 'ip') { document.getElementById('ban-value-heading').innerHTML = 'Endereï¿½o de IP'; } else { document.getElementById('ban-value-heading').innerHTML = 'Usuï¿½rio'; }" onkeyup="onchange="if (this.value == 'ip') { document.getElementById('ban-value-heading').innerHTML = 'Endereï¿½o de IP'; } else { document.getElementById('ban-value-heading').innerHTML = 'Usuï¿½rio'; }" onchange="if (this.value == 'ip') { document.getElementById('ban-value-heading').innerHTML = 'Endereï¿½o de IP'; } else { document.getElementById('ban-value-heading').innerHTML = 'Usuï¿½rio'; }">
 <option value="ip">IP Banido</option>
-<option value="user">Usuário banido</option>
+<option value="user">Usuï¿½rio banido</option>
 </select><br />
 <br />
 
-<span id="ban-value-heading">Endereço de IP</span>:<Br />
+<span id="ban-value-heading">Endereï¿½o de IP</span>:<Br />
 <input type="text" name="value"><br />
 <br />
 
@@ -181,7 +186,7 @@ function banPreset(val)
 
 Length (in seconds!):<br />
 <input type="text" name="length" id="banlength"> secs<br />
-<small>(Presets: <a href="#" onclick="banPreset(3600);">1hr</a> <a href="#" onclick="banPreset(10800);">3hr</a> <a href="#" onclick="banPreset(43200);">12hr</a> <a href="#" onclick="banPreset(86400);">1dia</a> <a href="#" onclick="banPreset(259200);">3day</a> <a href="#" onclick="banPreset(604800);">1sm</a> <a href="#" onclick="banPreset(1209600);">2wk</a> <a href="#" onclick="banPreset(2592000);">1mês</a> <a href="#" onclick="banPreset(7776000);">3mo</a> <a href="#" onclick="banPreset(1314000);">1an</a> <a href="#" onclick="banPreset(2628000);">2yr</a> <a href="#" onclick="banPreset(360000000);">Perm</a>)</small><br />
+<small>(Presets: <a href="#" onclick="banPreset(3600);">1hr</a> <a href="#" onclick="banPreset(10800);">3hr</a> <a href="#" onclick="banPreset(43200);">12hr</a> <a href="#" onclick="banPreset(86400);">1dia</a> <a href="#" onclick="banPreset(259200);">3day</a> <a href="#" onclick="banPreset(604800);">1sm</a> <a href="#" onclick="banPreset(1209600);">2wk</a> <a href="#" onclick="banPreset(2592000);">1mï¿½s</a> <a href="#" onclick="banPreset(7776000);">3mo</a> <a href="#" onclick="banPreset(1314000);">1an</a> <a href="#" onclick="banPreset(2628000);">2yr</a> <a href="#" onclick="banPreset(360000000);">Perm</a>)</small><br />
 <br />
 
 <input type="checkbox" name="no-appeal" value="checked"> OK<br />
@@ -205,7 +210,7 @@ Length (in seconds!):<br />
 	<td>Expira</td>
 	<td>Add</td>
 	<td>Status</td>
-	<td>Opção</td>
+	<td>Opï¿½ï¿½o</td>
 </tr>
 </thead>
 <tbody>
@@ -225,17 +230,17 @@ while ($ban = mysql_fetch_assoc($getBans))
 	
 	if ($ban['appeal_state'] == "0")
 	{
-		echo 'Não será permitido apelo !';
+		echo 'Nï¿½o serï¿½ permitido apelo !';
 	}
 	else if ($ban['appeal_state'] == "1")
 	{
 		if (mysql_num_rows(dbquery("SELECT null FROM bans_appeals WHERE ban_id = '" . $ban['id'] . "' AND plea != '' LIMIT 1")) > 0)
 		{
-			echo '<b style="color: blue;">Usuário foi banido sem apelo e está à espera de um milagre !</b>';
+			echo '<b style="color: blue;">Usuï¿½rio foi banido sem apelo e estï¿½ ï¿½ espera de um milagre !</b>';
 		}
 		else
 		{
-			echo 'Usuário banido sem apelo';
+			echo 'Usuï¿½rio banido sem apelo';
 		}
 	}
 	else if ($ban['appeal_state'] == "2")

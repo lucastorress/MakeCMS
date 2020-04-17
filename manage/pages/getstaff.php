@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -33,14 +33,14 @@ require_once "top.php";
 <h1>Staff listing</h1>
 
 <p>
-	Esta página pode mostrar todos os usuários de nossa equipe.
+	Esta pï¿½gina pode mostrar todos os usuï¿½rios de nossa equipe.
 </p>
 
 <br />
 
 <table width="100%" border="1">
 <thead>
-	<td>Usuário</td>
+	<td>Usuï¿½rio</td>
 	<td>Cargo</td>
 	<td>E-mail</td>
 </thead>

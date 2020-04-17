@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -81,28 +81,28 @@ if (isset($_POST['opt']))
 				$l = 'aberto';
 			}
 			
-			fMessage('ok', 'Tópico ' . $l . '.');
+			fMessage('ok', 'Tï¿½pico ' . $l . '.');
 			
 			dbquery("UPDATE moderation_forum_threads SET locked = '" . $newState . "' WHERE id = '" . $t['id'] . "' LIMIT 1");
 			break;
 	
 		case 'stick':
 		
-			fMessage('ok', 'Tópico fixo.');
+			fMessage('ok', 'Tï¿½pico fixo.');
 		
 			dbquery("UPDATE moderation_forum_threads SET timestamp = '99999999999' WHERE id = '" . $t['id'] . "' LIMIT 1");
 			break;
 	
 		case 'bump':
 		
-			fMessage('ok', 'Tópico atualizado.');
+			fMessage('ok', 'Tï¿½pico atualizado.');
 		
 			dbquery("UPDATE moderation_forum_threads SET timestamp = '" . time() . "' WHERE id = '" . $t['id'] . "' LIMIT 1");
 			break;
 	
 		case 'del';
 		
-			fMessage('ok', 'Deletar tópico.');
+			fMessage('ok', 'Deletar tï¿½pico.');
 		
 			dbquery("DELETE FROM moderation_forum_threads WHERE id = '" . $t['id'] . "' LIMIT 1");
 			dbquery("DELETE FROM moderation_forum_replies WHERE thread_id = '" . $t['id'] . "'");
@@ -118,10 +118,10 @@ require_once "top.php";
 ?>	
 
 <h1>
-	<?php if ($t['locked'] >= 1) { echo '<img src="images/locked.gif" alt="Fechado" title="Tópico fechado" style="vertical-align: middle;">'; } ?>
-	<?php if ($t['timestamp'] >= 99999999999) { echo '<img src="images/sticky.gif" alt="Fixo" title="Tópico fixo" style="vertical-align: middle;">'; } ?>
-	Fórum de discução - "<?php echo clean($t['subject']); ?>"<br />
-	<small style="font-weight: normal; font-size: 80%;"><?php echo $t['poster']; ?> no <?php echo $t['date']; ?> (<a href="index.php?_cmd=forum">Retornar para o fórum de discução</a>)</small>
+	<?php if ($t['locked'] >= 1) { echo '<img src="images/locked.gif" alt="Fechado" title="Tï¿½pico fechado" style="vertical-align: middle;">'; } ?>
+	<?php if ($t['timestamp'] >= 99999999999) { echo '<img src="images/sticky.gif" alt="Fixo" title="Tï¿½pico fixo" style="vertical-align: middle;">'; } ?>
+	Fï¿½rum de discuï¿½ï¿½o - "<?php echo clean($t['subject']); ?>"<br />
+	<small style="font-weight: normal; font-size: 80%;"><?php echo $t['poster']; ?> no <?php echo $t['date']; ?> (<a href="index.php?_cmd=forum">Retornar para o fï¿½rum de discuï¿½ï¿½o</a>)</small>
 </h1>
 
 <?php if ($users->hasFuse(HK_USER_ID, 'fuse_admin')) { ?>
@@ -130,15 +130,15 @@ require_once "top.php";
 <div id="toolbox" style="font-weight: normal; border: 1px dotted #000; margin: 0px; padding: 5px;">
 <form method="post">
 
-<b>Opções da administração:</b>
+<b>Opï¿½ï¿½es da administraï¿½ï¿½o:</b>
 
 &nbsp;
 
 <select name="opt">
-	<?php if ($t['timestamp'] < 99999999999) { ?><option value="stick">Tópico Fixo</option><?php } ?>
-	<option value="bump"><?php if ($t['timestamp'] >= 99999999999) { echo 'Retirar "fixo"'; } else { echo 'Atualizar tópico'; } ?></option>	
+	<?php if ($t['timestamp'] < 99999999999) { ?><option value="stick">Tï¿½pico Fixo</option><?php } ?>
+	<option value="bump"><?php if ($t['timestamp'] >= 99999999999) { echo 'Retirar "fixo"'; } else { echo 'Atualizar tï¿½pico'; } ?></option>	
 	<option value="lock"><?php if ($t['locked'] == "1") { echo 'Desbloquear'; } else { echo 'Bloquear'; } ?></option>
-	<option value="del">Deletar tópico</option>
+	<option value="del">Deletar tï¿½pico</option>
 </select>
 
 &nbsp;
@@ -181,7 +181,7 @@ if (mysql_num_rows($getReplies) >= 1)
 }
 else if ($t['locked'] == "0")
 {
-	echo '<i>Este tópico não tem nenhuma resposta.</i>';
+	echo '<i>Este tï¿½pico nï¿½o tem nenhuma resposta.</i>';
 }
 
 if ($t['locked'] == "0") {

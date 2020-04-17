@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -81,21 +81,21 @@ require_once "top.php";
 <br />
 
 <p>
-		Esta ferramenta monitora as conversas dos usuários. OBS: Ela não monitora o minimail e o Chat especial.
+		Esta ferramenta monitora as conversas dos usuï¿½rios. OBS: Ela nï¿½o monitora o minimail e o Chat especial.
 </p>
 
 <br />
 
 <p>
-	<b>IMPORTANTE:</b> Você pode ver só uma quantia de conversas.<br />
-	A cada 2 semanas essas conversas são deletadas do nosso sistema.
+	<b>IMPORTANTE:</b> Vocï¿½ pode ver sï¿½ uma quantia de conversas.<br />
+	A cada 2 semanas essas conversas sï¿½o deletadas do nosso sistema.
 </p>
 
 <?php
 
 if (isset($searchResults))
 {
-	echo '<h2>Procurar resultados - Você procurou por "<span style="font-size: 125%;">' . clean($_POST['searchQuery']) . '</span>"</h2>';
+	echo '<h2>Procurar resultados - Vocï¿½ procurou por "<span style="font-size: 125%;">' . clean($_POST['searchQuery']) . '</span>"</h2>';
 	echo '<br /><p><a href="index.php?_cmd=chatlogs&doReset">Limpar busca</a></p><br />
 	
 	<table width="100%">
@@ -103,10 +103,10 @@ if (isset($searchResults))
 	<tr>
 		<td>Data</td>
 		<td>Hora</td>
-		<td>Usuário</td>
+		<td>Usuï¿½rio</td>
 		<td>Quarto</td>
 		<td>Conversas</td>
-		<td>Segundos atrás</td>
+		<td>Segundos atrï¿½s</td>
 	</tr>
 	<tbody>';
 	
@@ -144,17 +144,17 @@ else
 	
 	<form method="post">
 	
-	Método:&nbsp;
+	Mï¿½todo:&nbsp;
 	<select name="searchType">
-	<option value="1">Por usuário</option>
+	<option value="1">Por usuï¿½rio</option>
 	<option value="2">Por mensagem</option>
 	<option value="3">Por quarto (SOMENTE ID)</option>
-	<option value="4">Segundos atrás (MAX 600 seg.)</option>
+	<option value="4">Segundos atrï¿½s (MAX 600 seg.)</option>
 	</select>
 	
 	<br /><br />
 	
-	Buscar (O usuário, a mensagem, o ID e a quantidade de segundos):&nbsp;
+	Buscar (O usuï¿½rio, a mensagem, o ID e a quantidade de segundos):&nbsp;
 	<input type="text" name="searchQuery">
 	
 	<br /><br />
@@ -170,10 +170,10 @@ else
 	<tr>
 		<td>Data</td>
 		<td>Hora</td>
-		<td>Usuário</td>
+		<td>Usuï¿½rio</td>
 		<td>Quarto</td>
 		<td>Mensagem</td>
-		<td>Segundos atrás</td>
+		<td>Segundos atrï¿½s</td>
 	</tr>
 	<tbody>';
 	

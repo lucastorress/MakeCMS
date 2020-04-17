@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -33,16 +33,16 @@ if (isset($_POST['v-code']))
 	
 	if (strlen($vCode) <= 0)
 	{
-		fMessage('error', 'Entre com um código de Habbo Moedas.');
+		fMessage('error', 'Entre com um cï¿½digo de Habbo Moedas.');
 	}
 	else if (!is_numeric($vValue) || intval($vValue) <= 0 || intval($vValue) > 90000)
 	{
-		fMessage('error', 'Quantidade inválida, digite uma quantidade entre 1 - 90000.');
+		fMessage('error', 'Quantidade invï¿½lida, digite uma quantidade entre 1 - 90000.');
 	}
 	else
 	{
 		dbquery("INSERT INTO credit_vouchers (code,value) VALUES ('" . $vCode . "','" . intval($vValue) . "')");
-		fMessage('ok', 'Um novo código foi criado. Bom uso !');
+		fMessage('ok', 'Um novo cï¿½digo foi criado. Bom uso !');
 	}
 }
 
@@ -50,31 +50,31 @@ require_once "top.php";
 
 ?>			
 
-<h1>Código de Habbo Moedas</h1>
+<h1>Cï¿½digo de Habbo Moedas</h1>
 
 <br />
 
 <p>
-	Os códigos de Habbo Moedas podem ser usados tanto no site como no Hotel. Lembre-se do que está escrito na página inicial !
+	Os cï¿½digos de Habbo Moedas podem ser usados tanto no site como no Hotel. Lembre-se do que estï¿½ escrito na pï¿½gina inicial !
 </p>
 
 <br />
 
 <p style="font-size: 125%; color: darkred;">
-	<b>NOTA:</b> Equipe Habbo, não abuse do sistema. Isso lhe acarretará problemas no hotel. Não entregue moedas de graça, somente se algum membro ganhou em alguma promoção.</u>
+	<b>NOTA:</b> Equipe Habbo, nï¿½o abuse do sistema. Isso lhe acarretarï¿½ problemas no hotel. Nï¿½o entregue moedas de graï¿½a, somente se algum membro ganhou em alguma promoï¿½ï¿½o.</u>
 </p>
 
 <br />
 
 <div style="float: left; width: 49%;">
 
-	<h2>Códigos ativados</h2>
+	<h2>Cï¿½digos ativados</h2>
 	
 	<br />
 
 	<table width="100%" border="1">
 	<thead>
-		<td>Código</td>
+		<td>Cï¿½digo</td>
 		<td>Quantidade</td>
 	</thead>
 	<?php
@@ -96,13 +96,13 @@ require_once "top.php";
 
 <div style="float: right; width: 49%;">
 
-	<h2>Adicionar novo código</h2>
+	<h2>Adicionar novo cï¿½digo</h2>
 	
 	<br />
 	
 	<form method="post">
 	
-		Código:<br />
+		Cï¿½digo:<br />
 		<input type="text" name="v-code"><br />
 		<br />
 		Quantidade de moedas:<br />

@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -84,7 +84,7 @@ if (isset($_POST['new-element-id']))
 	
 	if (strlen($id) == 0 || strlen($id) > 24)
 	{
-		$errors[] = "ID inválido. Precisa ser de 0 até 24 digitos.";
+		$errors[] = "ID invï¿½lido. Precisa ser de 0 atï¿½ 24 digitos.";
 	}
 	
 	if ($type != "textbox" && $type != "textarea"
@@ -108,7 +108,7 @@ if (isset($_POST['new-element-id']))
 	}
 	else
 	{
-		fMessage('error', 'Não foi possível adicionar o elemento. Selecione o ponto correto.');
+		fMessage('error', 'Nï¿½o foi possï¿½vel adicionar o elemento. Selecione o ponto correto.');
 	}
 }
 
@@ -116,41 +116,41 @@ require_once "top.php";
 
 ?>			
 
-<h1>Formulário de aplicações</h1>
+<h1>Formulï¿½rio de aplicaï¿½ï¿½es</h1>
 
 <p>
-	Nunca um usuário aplica uma resposta. Você têm de fazer um fomulário aonde sua obrigação será totalmente sua.
+	Nunca um usuï¿½rio aplica uma resposta. Vocï¿½ tï¿½m de fazer um fomulï¿½rio aonde sua obrigaï¿½ï¿½o serï¿½ totalmente sua.
 </p>
 
 <h2>
 
-<b>Adicionar novo formulário</b> (<a href="#" onclick="t('elform');">Ver/Esconder</a>)
+<b>Adicionar novo formulï¿½rio</b> (<a href="#" onclick="t('elform');">Ver/Esconder</a>)
 
 <div id="elform" style="padding: 10px;">
 <br />
 
 <form method="post">
 
-Tipo do formulário:<br />
+Tipo do formulï¿½rio:<br />
 <select name="new-element-type">
 <option value="textbox">Caixa de texto</option>
-<option value="textarea">Area de texto (Para uma redação)</option>
-<option value="checkbox">Checkbox (Uma descrição)</option>
+<option value="textarea">Area de texto (Para uma redaï¿½ï¿½o)</option>
+<option value="checkbox">Checkbox (Uma descriï¿½ï¿½o)</option>
 </select>
 
 <br /><br />
 
-ID do elemento (curto, <u>unico</u>, e não adicione carácteres especiais):<br />
+ID do elemento (curto, <u>unico</u>, e nï¿½o adicione carï¿½cteres especiais):<br />
 <input type="text" value="" maxlength="24" name="new-element-id">
 
 <br /><br />
 
-Nome do formulário:<br />
+Nome do formulï¿½rio:<br />
 <input type="text" value="" maxlength="120" name="new-element-name">
 
 <br /><br />
 
-Descrição:<br />
+Descriï¿½ï¿½o:<br />
 <textarea name="new-element-descr" cols="50" rows="4"></textarea>
 
 <br /><br />
@@ -187,7 +187,7 @@ while ($el = mysql_fetch_assoc($getElements))
 	
 	if ($el['required'] == "1")
 	{
-		echo '<b style="color: darkred;"><small>(Este é um espaço requirido)</small></b><br />';
+		echo '<b style="color: darkred;"><small>(Este ï¿½ um espaï¿½o requirido)</small></b><br />';
 	}
 	
 	echo '<div style="width: 75%; border: 1px dotted; background-color: #F2F2F2; margin-top: 5px; padding: 10px;">';

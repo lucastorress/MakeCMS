@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -66,12 +66,12 @@ if (isset($_POST['name']))
 				}
 				else
 				{
-					fMessage('error', 'Não foi possível carregaro arquivo: ' . $fileLoc);
+					fMessage('error', 'Nï¿½o foi possï¿½vel carregaro arquivo: ' . $fileLoc);
 				}
 			}
 			else
 			{
-				fMessage('error', 'Arquivo inválido: ' . $ext);
+				fMessage('error', 'Arquivo invï¿½lido: ' . $ext);
 			}
 		}
 		else
@@ -127,7 +127,7 @@ require_once "top.php";
 <h1>ADS</h1>
 
 <p>
-	ADS podem ser exibidos quando um usuário vai de um quarto para o outro. NOTA: Somente em quartos públicos.
+	ADS podem ser exibidos quando um usuï¿½rio vai de um quarto para o outro. NOTA: Somente em quartos pï¿½blicos.
 </p>
 
 <h2>Galeria</h2>
@@ -140,7 +140,7 @@ require_once "top.php";
 	<td>Imagem <small>(clique para visualizar por inteiro)</small></td>
 	<td>Nome do arquivo</td>
 	<td>Redirecionamento</td>
-	<td>Visualizações</td>
+	<td>Visualizaï¿½ï¿½es</td>
 	<td>ATIVAR/DESATIVAR</td>
 	<td>Deletar</td>
 </tr>
@@ -213,7 +213,7 @@ if ($handle = opendir(CWD . '/ads'))
 		}
 		else
 		{
-			echo '<strong style="color: darkred;">Erro na entrada no banco de dados !<br />Faça o upload novamente.</strong>';
+			echo '<strong style="color: darkred;">Erro na entrada no banco de dados !<br />Faï¿½a o upload novamente.</strong>';
 		}
 		
 		echo '</td>

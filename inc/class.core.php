@@ -1,14 +1,19 @@
 <?php
 /*=======================================================================
-| MakeCMS - Sistema avançado de Administração de CMS
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Lucas Torres and Meth0d
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
-| Este programa é um Free Software aonde você pode editar os conteúdos
-| com os direitos autorais do editor.
+| This program is free software: you can redistribute it and/or modify
+| it under the terms of the GNU General Public License as published by
+| the Free Software Foundation, either version 3 of the License, or
+| (at your option) any later version.
 | #######################################################################
-| Contato:
-|         lucastorres.ce@gmail.com / sonhador_br@live.com
+| This program is distributed in the hope that it will be useful,
+| but WITHOUT ANY WARRANTY; without even the implied warranty of
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+| GNU General Public License for more details.
 \======================================================================*/
 
 class uberCore
@@ -138,7 +143,7 @@ class uberCore
 		echo '<b>' . $title. '</b><br />';
 		echo '&nbsp;' . $text;
 		echo '<hr size="1" style="width: 100%; margin: 15px 0px 15px 0px;" />';
-		echo 'A execução do script foi cancelada. Nós pedimos desculpas para o inconveniente. Se o problema for persistente, entre em contato com um Administrador.';
+		echo 'A execuï¿½ï¿½o do script foi cancelada. Nï¿½s pedimos desculpas para o inconveniente. Se o problema for persistente, entre em contato com um Administrador.';
 		echo '</div><center style="font-family: arial; font-size: 10px;">Powered by LucasTorres, Copyright 2010 ~ 2011 &copy</center>';
 		exit;		
 	}
@@ -149,14 +154,14 @@ class uberCore
 		
 		if (!file_exists($configPath))
 		{
-			$this->systemError('Erro de configuração', 'A configuração do arquivo está redirecionada para ' . $configPath);
+			$this->systemError('Erro de configuraï¿½ï¿½o', 'A configuraï¿½ï¿½o do arquivo estï¿½ redirecionada para ' . $configPath);
 		}
 		
 		require_once $configPath;
 		
 		if (!isset($config) || count($config) < 2)
 		{
-			$this->systemError('Erro de configuração', 'A configuração do arquivo está em formato errado ou em lugar errado.');
+			$this->systemError('Erro de configuraï¿½ï¿½o', 'A configuraï¿½ï¿½o do arquivo estï¿½ em formato errado ou em lugar errado.');
 		}
 		
 		$this->config = $config;
@@ -171,7 +176,7 @@ class uberCore
 			case 2:
 			case 0:
 			
-				return "O Hotel está offiline";
+				return "O Hotel estï¿½ offiline";
 				
 			case 1:
 			

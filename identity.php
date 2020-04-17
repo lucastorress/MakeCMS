@@ -1,14 +1,19 @@
 <?php
 /*=======================================================================
-| MakeCMS - Sistema avançado de Administração de CMS
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Lucas Torres and Meth0d
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
-| Este programa é um Free Software aonde você pode editar os conteúdos
-| com os direitos autorais do editor.
+| This program is free software: you can redistribute it and/or modify
+| it under the terms of the GNU General Public License as published by
+| the Free Software Foundation, either version 3 of the License, or
+| (at your option) any later version.
 | #######################################################################
-| Contato:
-|         lucastorres.ce@gmail.com / sonhador_br@live.com
+| This program is distributed in the hope that it will be useful,
+| but WITHOUT ANY WARRANTY; without even the implied warranty of
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+| GNU General Public License for more details.
 \======================================================================*/
 
 	
@@ -37,7 +42,7 @@
 
             <div class="error-messages-holder">
 
-                <h3>Alterar algumas informações, e tente novamente.</h3>
+                <h3>Alterar algumas informaï¿½ï¿½es, e tente novamente.</h3>
 
                 <ul>
 
@@ -103,15 +108,15 @@
 			}
 			else if ($users->IsNameTaken($userN))
 			{
-				$errors = "Esse nome já está em uso";
+				$errors = "Esse nome jï¿½ estï¿½ em uso";
 			}
 			else if ($users->IsNameBlocked($userN))
 			{
-				$errors = "Esse nome é bloqueada pela equipe habbo";
+				$errors = "Esse nome ï¿½ bloqueada pela equipe habbo";
 			}
 			else if (!$users->IsValidName($userN))
 			{
-				$errors = "Este nome não é válido";
+				$errors = "Este nome nï¿½o ï¿½ vï¿½lido";
 			}		
 			
 			if (!isset($errors))
@@ -140,7 +145,7 @@
 				$_SESSION['UBER_USER_N'] = $users->GetUserVar($_GET['param'], 'username');
 			else
 			{
-				header("Location: " . WWW . "/identity/avatars/error/Você não pode ligar-se nesta conta");
+				header("Location: " . WWW . "/identity/avatars/error/Vocï¿½ nï¿½o pode ligar-se nesta conta");
 				exit;
 			}
 				
@@ -168,20 +173,20 @@
 			$resp = recaptcha_check_answer ('6Le-aQoAAAAAAKaqhlUT0lAQbjqokPqmj0F1uvQm', $_SERVER["REMOTE_ADDR"], $_POST["recaptcha_challenge_field"], $_POST["recaptcha_response_field"]);
 			if (!$resp->is_valid)
 			{
-				$error = "Código Captcha não é válido";
+				$error = "Cï¿½digo Captcha nï¿½o ï¿½ vï¿½lido";
 			}	
 			else if ($userP <> $userCP)
 			{
-				$error = "Sua senha não é igual a sua senha antiga";
+				$error = "Sua senha nï¿½o ï¿½ igual a sua senha antiga";
 			}
 			else if ($userNP <> $userNPA)
 			{
-				$error = "Sua nova senha não é igual à sua senha redigite";
+				$error = "Sua nova senha nï¿½o ï¿½ igual ï¿½ sua senha redigite";
 				exit;
 			}
 			else if (strlen($userNP) < 6)
 			{
-				$error = "Sua nova senha é muito curta";
+				$error = "Sua nova senha ï¿½ muito curta";
 			}
 			else if (!isset($error))
 			{

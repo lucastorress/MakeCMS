@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -26,7 +26,7 @@ if (LOGGED_IN)
 
 $tpl->Init();
 
-$tpl->SetParam('page_title', 'Crie seu Habbo, construa seu Quarto, converse e faça novos amigos.');
+$tpl->SetParam('page_title', 'Crie seu Habbo, construa seu Quarto, converse e faï¿½a novos amigos.');
 $tpl->SetParam('credentials_username', '');
 
 $tpl->AddGeneric('head-init');
@@ -49,7 +49,7 @@ if (isset($_POST['credentials_username']) && isset($_POST['credentials_password'
 	
 	if (strlen($_POST['credentials_username']) < 1)
 	{
-		$errors[] = "Digite seu nome de usuário.";
+		$errors[] = "Digite seu nome de usuï¿½rio.";
 	}
 	
 	if (strlen($_POST['credentials_password']) < 1)

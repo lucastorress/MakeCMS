@@ -1,14 +1,19 @@
 <?php
 /*=======================================================================
-| WareCMS - Sistema avançado de Administração de CMS
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Lucas Reis & Dcr-Host
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
-| Este programa é um FreeSoftware aonde você pode editar os conteúdos
-| com os direitos autorais do editor.
+| This program is free software: you can redistribute it and/or modify
+| it under the terms of the GNU General Public License as published by
+| the Free Software Foundation, either version 3 of the License, or
+| (at your option) any later version.
 | #######################################################################
-| Este programa foi editado traduzido por Lucas Reis, créditos totais
-| para Meth0d, autor original do programa.
+| This program is distributed in the hope that it will be useful,
+| but WITHOUT ANY WARRANTY; without even the implied warranty of
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+| GNU General Public License for more details.
 \======================================================================*/
 
 
@@ -246,25 +251,25 @@ function popSsoClient(sso)
 			<a href="#" onClick="Toggle('main'); return false"><div class="plus" id="plus-main">-</div></a>		
 		</h2>
 		<ul id="list-main" class="listmnu">
-			<li><a href="index.php?_cmd=main">Página Principal</a></li>
-			<?php if($users->hasFuse(HK_USER_ID, 'fuse_admin')){ ?><li><a href="index.php?_cmd=todo"><b>Agenda de programações</b></a></li><?php } ?>
+			<li><a href="index.php?_cmd=main">Pï¿½gina Principal</a></li>
+			<?php if($users->hasFuse(HK_USER_ID, 'fuse_admin')){ ?><li><a href="index.php?_cmd=todo"><b>Agenda de programaï¿½ï¿½es</b></a></li><?php } ?>
 			<li><a href="/">Voltar para o site</a></li>
 			<li><a href="/client" onClick="popClient(); return false">Abrir o jogo</a>
-			<li><a href="index.php?_cmd=forum" style="color: darkred;">Discução da equipe</a></li>
+			<li><a href="index.php?_cmd=forum" style="color: darkred;">Discuï¿½ï¿½o da equipe</a></li>
 			<li><a href="index.php?_cmd=getstaff">Equipe Habbo</a></li>
 			<li><a href="index.php?_cmd=logout">Desconectar</a></li>
 		</ul>		
 		
 		<?php if ($users->hasFuse(USER_ID, 'fuse_admin')) { ?>
 		<h2>
-   Administração do Hotel
+   Administraï¿½ï¿½o do Hotel
 			<a href="#" onClick="Toggle('hotel'); return false"><div class="plus" id="plus-hotel">-</div></a>		
 		</h2>
 		<ul id="list-hotel" class="listmnu">
-			<li><a href="index.php?_cmd=maint"><b>Manutenção</b></li>
+			<li><a href="index.php?_cmd=maint"><b>Manutenï¿½ï¿½o</b></li>
 			<li><a href="index.php?_cmd=roomads">ADS nos quartos</a></li>
 			<li><a href="index.php?_cmd=badges">Visualizar emblemas</a></li>
-			<li><a href="index.php?_cmd=badgedefs">Definições dos emblemas</a></li>
+			<li><a href="index.php?_cmd=badgedefs">Definiï¿½ï¿½es dos emblemas</a></li>
 			<li><a href="index.php?_cmd=presets">MOD TOOL (Hotel)</a></li>
 			<li><a href="index.php?_cmd=extsignon">External Login</a></li>
 			<li><a href="index.php?_cmd=texts">External Texts</a></li>
@@ -275,43 +280,43 @@ function popSsoClient(sso)
 		
 		<?php if ($users->hasFuse(USER_ID, 'fuse_housekeeping_moderation')) { ?>
 		<h2>
-   Ajuda aos membros e Moderação
+   Ajuda aos membros e Moderaï¿½ï¿½o
 			<a href="#" onClick="Toggle('mod'); return false"><div class="plus" id="plus-mod">-</div></a>		
 		</h2>
 		<ul id="list-mod" class="listmnu">
 			<li><a href="index.php?_cmd=bans">Visualizar banimentos</a></li>
-			<li><a href="index.php?_cmd=iptool">Endereço de IP</a></li>
+			<li><a href="index.php?_cmd=iptool">Endereï¿½o de IP</a></li>
 			<li><a href="index.php?_cmd=chatlogs">Conversas</a></li>
-			<li><a href="index.php?_cmd=adminlook">Editar usuários</a></li>
+			<li><a href="index.php?_cmd=adminlook">Editar usuï¿½rios</a></li>
 			<li><a href="index.php?_cmd=cfhs">Pedidos de ajudas</a></li>
-			<li><a href="index.php?_cmd=vouchers">Códigos de Moedas</a></li>
+			<li><a href="index.php?_cmd=vouchers">Cï¿½digos de Moedas</a></li>
 		</ul>
 		<?php } ?>
 		
 		<?php if ($users->hasFuse(USER_ID, 'fuse_housekeeping_sitemanagement')) { ?>
 		<h2>
-   Administração do Website
+   Administraï¿½ï¿½o do Website
 			<a href="#" onClick="Toggle('site'); return false"><div class="plus" id="plus-site">-</div></a>		
 		</h2>
 		<ul id="list-site" class="listmnu">
 			<li><a href="index.php?_cmd=campaigns">Nova campanha</a></li>
-			<li><a href="index.php?_cmd=newspublish">Escrever notícia</a></li>
-			<li><a href="index.php?_cmd=news">Administrar notícias</a></li>
-			<li><a href="index.php?_cmd=jobapps">Ver formulários</a></li>
-			<li><a href="index.php?_cmd=jobopenings">Usuários merecedores</a></li>
+			<li><a href="index.php?_cmd=newspublish">Escrever notï¿½cia</a></li>
+			<li><a href="index.php?_cmd=news">Administrar notï¿½cias</a></li>
+			<li><a href="index.php?_cmd=jobapps">Ver formulï¿½rios</a></li>
+			<li><a href="index.php?_cmd=jobopenings">Usuï¿½rios merecedores</a></li>
 			<li><a href="index.php?_cmd=jobform">Criar lista de emprego</a></li>
 		</ul>
 		<?php } ?>		
 		
 		<?php if ($users->hasFuse(USER_ID, 'fuse_housekeeping_catalog')) { ?>
 		<h2>
-			Catálogo
+			Catï¿½logo
 			<a href="#" onClick="Toggle('cata'); return false"><div class="plus" id="plus-cata">-</div></a>		
 		</h2>
 		<ul id="list-cata" class="listmnu">
-			<li><a href="index.php?_cmd=ot-def">Definições dos itens</a></li>
-			<li><a href="index.php?_cmd=ot-pages">Páginas do catálogo</a></li>
-			<li><a href="index.php?_cmd=ot-cata-items">Itens do catálogo</a></li>
+			<li><a href="index.php?_cmd=ot-def">Definiï¿½ï¿½es dos itens</a></li>
+			<li><a href="index.php?_cmd=ot-pages">Pï¿½ginas do catï¿½logo</a></li>
+			<li><a href="index.php?_cmd=ot-cata-items">Itens do catï¿½logo</a></li>
 			<li><a href="index.php?_cmd=furnifinder">Procurar Mobis</a></li>
 		</ul>
 	
@@ -340,7 +345,7 @@ function popSsoClient(sso)
 			
 				echo 'Hotel <b style="color: darkgreen;">online</b>.';
 				echo '<br /><br />';
-				echo 'Temos : <a style="text-decoration: underline; " href="/onlineusers.html">' . $sysData['users_online'] . '</a> usuários online<br />';
+				echo 'Temos : <a style="text-decoration: underline; " href="/onlineusers.html">' . $sysData['users_online'] . '</a> usuï¿½rios online<br />';
 				echo '' . $sysData['rooms_loaded'] . 'quartos carregados<br />';
 				
 				break;

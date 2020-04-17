@@ -1,14 +1,19 @@
 <?php
 /*=======================================================================
-| MakeCMS - Sistema avançado de Administração de CMS
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Lucas Torres and Meth0d
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
-| Este programa é um Free Software aonde você pode editar os conteúdos
-| com os direitos autorais do editor.
+| This program is free software: you can redistribute it and/or modify
+| it under the terms of the GNU General Public License as published by
+| the Free Software Foundation, either version 3 of the License, or
+| (at your option) any later version.
 | #######################################################################
-| Contato:
-|         lucastorres.ce@gmail.com / sonhador_br@live.com
+| This program is distributed in the hope that it will be useful,
+| but WITHOUT ANY WARRANTY; without even the implied warranty of
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+| GNU General Public License for more details.
 \======================================================================*/
 
 define('IN_MAINTENANCE', true);
@@ -18,7 +23,7 @@ require_once "global.php";
 
 // Define basics
 $requestUserId = 0;
-$requestUserName = 'Não enviado';
+$requestUserName = 'Nï¿½o enviado';
 $requestOrderId = 0;
 $remoteIp = $_SERVER['REMOTE_ADDR'];
 
@@ -52,7 +57,7 @@ $remoteIp != "82.94.203.83" && $remoteIp != "82.94.203.84" && $remoteIp != "82.9
 	die("NOTOK/x0010");
 }
 
-if ($requestUserId <= 0 || $requestOrderId <= 0 || $requestUserName == 'Não enviado')
+if ($requestUserId <= 0 || $requestOrderId <= 0 || $requestUserName == 'Nï¿½o enviado')
 {
 	die("NOTOK/x0020");
 }

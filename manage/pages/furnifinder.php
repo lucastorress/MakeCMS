@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -29,7 +29,7 @@ if (!HK_LOGGED_IN || !$users->hasFuse(HK_USER_ID, 'fuse_housekeeping_catalog'))
 require_once "top.php";
 
 echo '<h1>Encontrar novos mobis</h1>';
-echo '<p>Essa ferramenta permite escanear o Habbo Original e encontrar novas atualizações para o seu habbo.</p><br />';
+echo '<p>Essa ferramenta permite escanear o Habbo Original e encontrar novas atualizaï¿½ï¿½es para o seu habbo.</p><br />';
 echo '<p><a href="http://hotel-uk.habbo.com/gamedata/furnidata?hash=x">http://hotel-us.habbo.com/gamedata/furnidata?hash=x</a></p><br />';
 
 $whatWeKnow = Array();
@@ -212,7 +212,7 @@ if ($ij >= 1)
 }
 else
 {
-	echo '<Br /><br /><center style="font-size: 120%;"><i><b>Boas notícias !</b><br />Encontramos novos móveis para você.</i></center>';
+	echo '<Br /><br /><center style="font-size: 120%;"><i><b>Boas notï¿½cias !</b><br />Encontramos novos mï¿½veis para vocï¿½.</i></center>';
 }
 
 require_once "bottom.php";

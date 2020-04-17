@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -45,7 +45,7 @@ if (empty($rlname))
 				document.getElementById('name').innerHTML = name;
 			}
 			else
-				alert("Seu nome não é alterado.");
+				alert("Seu nome nï¿½o ï¿½ alterado.");
 		}
 	</script>
 	
@@ -53,15 +53,15 @@ if (empty($rlname))
 			<div class="box"><div class="text">
 				<center><img src="/images/logo.png"></center> 
 				<br><br> <div style="padding:2px 5px;background:black;font-size:100%;margin-top:4px;color:white"><b>
-				Vemos que o seu nome verdadeiro ainda não está completado.<br>
+				Vemos que o seu nome verdadeiro ainda nï¿½o estï¿½ completado.<br>
 				<br>
 				Por favor, complete o que se pede abaixo.<br>
 				<br>
-				Obrigado por sua cooperação.<br>
+				Obrigado por sua cooperaï¿½ï¿½o.<br>
 				<br> 
 				Name: <input type="text" id="rlname" value=""/>
 				<a href="javascript:changerlname(document.getElementById('rlname').value);"><span>Done</span></a><br>
-				<span style="font-size: 10px; color: darkred;">Depois de clicar em 'Done', não há nenhuma maneira de mudanças ele!</span><br> 
+				<span style="font-size: 10px; color: darkred;">Depois de clicar em 'Done', nï¿½o hï¿½ nenhuma maneira de mudanï¿½as ele!</span><br> 
 				<br> 
 				<br>
 			</div></div> </div>

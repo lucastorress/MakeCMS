@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -45,7 +45,7 @@ if (isset($_GET['doDel']))
 	dbquery("DELETE FROM external_texts WHERE skey = 'badge_name_" . filter($_GET['doDel']) . "' LIMIT 1");
 	dbquery("DELETE FROM external_texts WHERE skey = 'badge_desc_" . filter($_GET['doDel']) . "' LIMIT 1");
 	
-	fMessage('ok', 'Definição do Emblema removido.');
+	fMessage('ok', 'Definiï¿½ï¿½o do Emblema removido.');
 	
 	header("Location: index.php?_cmd=badgedefs");
 	exit;
@@ -53,15 +53,15 @@ if (isset($_GET['doDel']))
 
 require_once "top.php";
 
-echo '<h1>Definição do emblema</h1>';
-echo '<p>Esta ferramenta ela pode definir qual será a descrição do emblema.</p><br />';
+echo '<h1>Definiï¿½ï¿½o do emblema</h1>';
+echo '<p>Esta ferramenta ela pode definir qual serï¿½ a descriï¿½ï¿½o do emblema.</p><br />';
 
 echo '<table border="1" width="100%">';
 echo '<thead>';
 echo '<tr>';
 echo '<td>Emblema</td>';
 echo '<td>Nome</td>';
-echo '<td>Descrição</td>';
+echo '<td>Descriï¿½ï¿½o</td>';
 echo '<td>Controles</td>';
 echo '</tr>';
 

@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -73,10 +73,10 @@
 
                     <div class="first-avatar-name"><?php echo $row[1]; ?></div>
 
-                    <div class="first-avatar-lastonline">Última Visita: <span><?php echo substr($datum = $row[2], 0, strpos($datum, ' ')); ?></span></div>
+                    <div class="first-avatar-lastonline">ï¿½ltima Visita: <span><?php echo substr($datum = $row[2], 0, strpos($datum, ' ')); ?></span></div>
 
 										<?php if ($row[4] <> $_SESSION['UBER_USER_H'])
-											echo "<div id='first-avatar-play-link' style='color: darkred;'>Você não pode jogar com este Habbo.</a></div>";
+											echo "<div id='first-avatar-play-link' style='color: darkred;'>Vocï¿½ nï¿½o pode jogar com este Habbo.</a></div>";
 										else
 										{ ?>
 										<a id="first-avatar-play-link" href="%www%/identity/useOrCreateAvatar/<?php echo $row[0]; ?>">

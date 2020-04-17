@@ -1,14 +1,19 @@
 <?php
 /*=======================================================================
-| MakeCMS - Sistema avançado de Administração de CMS
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Lucas Torres and Meth0d
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
-| Este programa é um Free Software aonde você pode editar os conteúdos
-| com os direitos autorais do editor.
+| This program is free software: you can redistribute it and/or modify
+| it under the terms of the GNU General Public License as published by
+| the Free Software Foundation, either version 3 of the License, or
+| (at your option) any later version.
 | #######################################################################
-| Contato:
-|         lucastorres.ce@gmail.com / sonhador_br@live.com
+| This program is distributed in the hope that it will be useful,
+| but WITHOUT ANY WARRANTY; without even the implied warranty of
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+| GNU General Public License for more details.
 \======================================================================*/
 
 define('TAB_ID', 5);
@@ -89,18 +94,18 @@ if ($articleData != null)
 	$article->SetParam('news_article_summary', clean($articleData['snippet']));
 	$article->SetParam('news_article_body', clean($articleData['body'], true));
 	
-	$tpl->SetParam('page_title', 'Notícias - ' . clean($articleData['title']));
+	$tpl->SetParam('page_title', 'Notï¿½cias - ' . clean($articleData['title']));
 }
 else
 {
 	$article->SetParam('news_article_id', 0);
-	$article->SetParam('news_article_title', 'Notícia não encontrada');
+	$article->SetParam('news_article_title', 'Notï¿½cia nï¿½o encontrada');
 	$article->SetParam('news_article_date', '');
 	$article->SetParam('news_category', '');
 	$article->SetParam('news_article_summary', '');
-	$article->SetParam('news_article_body', "A notícia que você está procurando, não foi encontrada em nosso site.");	
+	$article->SetParam('news_article_body', "A notï¿½cia que vocï¿½ estï¿½ procurando, nï¿½o foi encontrada em nosso site.");	
 	
-	$tpl->SetParam('page_title', 'Notícias - Notícia não encontrada');
+	$tpl->SetParam('page_title', 'Notï¿½cias - Notï¿½cia nï¿½o encontrada');
 }
 
 $tpl->AddTemplate($article);

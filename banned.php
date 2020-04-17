@@ -1,14 +1,19 @@
 <?php
 /*=======================================================================
-| MakeCMS - Sistema avançado de Administração de CMS
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Lucas Torres and Meth0d
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
-| Este programa é um Free Software aonde você pode editar os conteúdos
-| com os direitos autorais do editor.
+| This program is free software: you can redistribute it and/or modify
+| it under the terms of the GNU General Public License as published by
+| the Free Software Foundation, either version 3 of the License, or
+| (at your option) any later version.
 | #######################################################################
-| Contato:
-|         lucastorres.ce@gmail.com / sonhador_br@live.com
+| This program is distributed in the hope that it will be useful,
+| but WITHOUT ANY WARRANTY; without even the implied warranty of
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+| GNU General Public License for more details.
 \======================================================================*/
 
 define('BAN_PAGE', true);
@@ -42,28 +47,28 @@ $tpl->AddGeneric('head-overrides-process');
 $tpl->AddGeneric('head-bottom');
 $tpl->AddGeneric('process-template-top');
 
-$tpl->Write('<h2>Você está banido ! ' . (LOGGED_IN ? '<small style="font-weight: normal; font-size: 60%;">(<a href="%www%/logout.html">Sair</a>)</small>' : '') . '</h2>');
+$tpl->Write('<h2>Vocï¿½ estï¿½ banido ! ' . (LOGGED_IN ? '<small style="font-weight: normal; font-size: 60%;">(<a href="%www%/logout.html">Sair</a>)</small>' : '') . '</h2>');
 $tpl->Write('<img align="right" src="%www%/images/banned.php">');
-$tpl->Write('<p>Você está banido do %hotelName% pelo seguinte motivo:</p>');
+$tpl->Write('<p>Vocï¿½ estï¿½ banido do %hotelName% pelo seguinte motivo:</p>');
 $tpl->Write('<p style="margin-top: 5px; margin-bottom: 5px; font-size: 110%;"><b>' . clean($ban['reason'], false, true) . '</b></p>');
-$tpl->Write('<p>Você foi banido no dia <b>' . $ban['added_date'] . '</b> e ele irá expirar no dia <b>' . date('d F, Y', $ban['expire']) . '</b> agora são <b>' . ceil(($ban['expire'] - time()) / 86400) . '</b> dias para ser desbanido.</p>');
-$tpl->Write('<p>De acordo com o servdor, seu IP é <b>' . USER_IP . '</b>. ' . (($ban['bantype'] == 'user') ? 'O nome associado para banimento é <b>' . clean($ban['value']) . '</b>.' : 'Não há nome associado para esse banimento.') . '</p>');
+$tpl->Write('<p>Vocï¿½ foi banido no dia <b>' . $ban['added_date'] . '</b> e ele irï¿½ expirar no dia <b>' . date('d F, Y', $ban['expire']) . '</b> agora sï¿½o <b>' . ceil(($ban['expire'] - time()) / 86400) . '</b> dias para ser desbanido.</p>');
+$tpl->Write('<p>De acordo com o servdor, seu IP ï¿½ <b>' . USER_IP . '</b>. ' . (($ban['bantype'] == 'user') ? 'O nome associado para banimento ï¿½ <b>' . clean($ban['value']) . '</b>.' : 'Nï¿½o hï¿½ nome associado para esse banimento.') . '</p>');
 
 if ($ban['appeal_state'] == "1" && ($ban['expire'] - time()) >= 259200)
 {
-	$tpl->Write('Devido a sua proibição é mais do que 3 dias de duração, você pode recorrer a proibição por meio do formulário abaixo. Por favor, explique porque você acha que merece ser banido. Rude, mal escrito, ou recursos ofensivo será recusado. Interposição de recurso não garante nem implica que a sua proibição será levantada antes de sua data de validade indicados. Endereço e-mail é opcional, porém se você não fornecer um, seremos incapazes de contatá-lo com perguntas e / ou atualizações.');
+	$tpl->Write('Devido a sua proibiï¿½ï¿½o ï¿½ mais do que 3 dias de duraï¿½ï¿½o, vocï¿½ pode recorrer a proibiï¿½ï¿½o por meio do formulï¿½rio abaixo. Por favor, explique porque vocï¿½ acha que merece ser banido. Rude, mal escrito, ou recursos ofensivo serï¿½ recusado. Interposiï¿½ï¿½o de recurso nï¿½o garante nem implica que a sua proibiï¿½ï¿½o serï¿½ levantada antes de sua data de validade indicados. Endereï¿½o e-mail ï¿½ opcional, porï¿½m se vocï¿½ nï¿½o fornecer um, seremos incapazes de contatï¿½-lo com perguntas e / ou atualizaï¿½ï¿½es.');
 }
 else if ($ban['appeal_state'] == "1")
 {
-	$tpl->Write('Devido a sua proibição vai expirar dentro de três dias, você não poderá apelar da proibição.');
+	$tpl->Write('Devido a sua proibiï¿½ï¿½o vai expirar dentro de trï¿½s dias, vocï¿½ nï¿½o poderï¿½ apelar da proibiï¿½ï¿½o.');
 }
 else if ($ban['appeal_state'] == "0")
 {
-	$tpl->Write('<b style="color: darkred;">Esta proibição é final e você não estão autorizados a apresentar um recurso contra ela.</b>');
+	$tpl->Write('<b style="color: darkred;">Esta proibiï¿½ï¿½o ï¿½ final e vocï¿½ nï¿½o estï¿½o autorizados a apresentar um recurso contra ela.</b>');
 }
 else if ($ban['appeal_state'] == "2")
 {
-	$tpl->Write('<b style="color: darkred;">Seu recurso foi revisto e diminuído. Você não poderá apelar da proibição de novo.</b>');
+	$tpl->Write('<b style="color: darkred;">Seu recurso foi revisto e diminuï¿½do. Vocï¿½ nï¿½o poderï¿½ apelar da proibiï¿½ï¿½o de novo.</b>');
 }
 
 if ($ban['appeal_state'] == "1" && ($ban['expire'] - time()) >= 259200)
@@ -93,7 +98,7 @@ if ($ban['appeal_state'] == "1" && ($ban['expire'] - time()) >= 259200)
 
 	if (strlen($adata['plea']))
 	{
-		$tpl->Write('<b style="color: darkred;">Obrigado. Seu recurso foi apresentado e será analisada por um membro da equipe em breve. Enquanto espera por reviewal você pode fazer modificações se desejar.</b>');
+		$tpl->Write('<b style="color: darkred;">Obrigado. Seu recurso foi apresentado e serï¿½ analisada por um membro da equipe em breve. Enquanto espera por reviewal vocï¿½ pode fazer modificaï¿½ï¿½es se desejar.</b>');
 	}
 					
 	$tpl->Write('<p>

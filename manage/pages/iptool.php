@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -33,18 +33,18 @@ if (isset($_POST['ip'])) { $ip = filter($_POST['ip']); }
 require_once "top.php";			
 
 echo '<h1>Ferramenta de IP / Checar Clone</h1>
-<br /><p>Esta ferramenta pode mostrar os usuários que têm mais de uma conta em nosso hotel e também pode mostrar o ip do usuário caso queira bani-lo permanente. <b>Pedimos para que veja o usuário primeiro em seguida o seu IP</b>.</p>';
+<br /><p>Esta ferramenta pode mostrar os usuï¿½rios que tï¿½m mais de uma conta em nosso hotel e tambï¿½m pode mostrar o ip do usuï¿½rio caso queira bani-lo permanente. <b>Pedimos para que veja o usuï¿½rio primeiro em seguida o seu IP</b>.</p>';
 
 echo '<br />
 <form method="post">
-Usuário:<br />
+Usuï¿½rio:<br />
 <input type="text" name="user"><Br />
 <input type="submit" value="Visualizar">
 </form>';
 
 echo '<br />
 <form method="post">
-Endereço de IP:<br />
+Endereï¿½o de IP:<br />
 <input type="text" name="ip"><Br />
 <input type="submit" value="Visualizar">
 </form>';
@@ -64,7 +64,7 @@ if (isset($_POST['user']))
 
 if (isset($ip) && strlen($ip) > 0)
 {
-	echo '<h2 style="font-size: 140%;">Usuários com o mesmo IP: ' . $ip . '</h2>';
+	echo '<h2 style="font-size: 140%;">Usuï¿½rios com o mesmo IP: ' . $ip . '</h2>';
 	$get = dbquery("SELECT * FROM users WHERE ip_last = '" . $ip . "' LIMIT 50");
 	
 	while ($user = mysql_fetch_assoc($get))

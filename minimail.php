@@ -1,14 +1,19 @@
 <?php
 /*=======================================================================
-| MakeCMS - Sistema avançado de Administração de CMS
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Lucas Torres and Meth0d
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
-| Este programa é um Free Software aonde você pode editar os conteúdos
-| com os direitos autorais do editor.
+| This program is free software: you can redistribute it and/or modify
+| it under the terms of the GNU General Public License as published by
+| the Free Software Foundation, either version 3 of the License, or
+| (at your option) any later version.
 | #######################################################################
-| Contato:
-|         lucastorres.ce@gmail.com / sonhador_br@live.com
+| This program is distributed in the hope that it will be useful,
+| but WITHOUT ANY WARRANTY; without even the implied warranty of
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+| GNU General Public License for more details.
 \======================================================================*/
 
 require_once "global.php";
@@ -29,7 +34,7 @@ switch (strtolower($cmd))
 {
 	case 'confirmreport':
 	
-		echo 'Não foi possível reportar essa mensagem. Peça ajuda no hotel.';
+		echo 'Nï¿½o foi possï¿½vel reportar essa mensagem. Peï¿½a ajuda no hotel.';
 		break;
 
 	case 'sendmessage':
@@ -76,7 +81,7 @@ switch (strtolower($cmd))
 		
 		if (strlen($subject) < 1 || strlen($subject) > 120 || strlen($body) > 4096)
 		{
-			die("A mensagem não pode ser entregue. Não há destinatário ou o corpo da mensagem está muito grande.");
+			die("A mensagem nï¿½o pode ser entregue. Nï¿½o hï¿½ destinatï¿½rio ou o corpo da mensagem estï¿½ muito grande.");
 		}		
 		
 		foreach ($recipientIds as $r)

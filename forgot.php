@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -32,8 +32,8 @@ $tpl->WriteIncludeFiles();
 $tpl->AddGeneric('head-overrides-process');
 $tpl->AddGeneric('head-bottom');
 $tpl->AddGeneric('process-template-top');
-$tpl->Write('<p>Desculpe, mas a recuperação de conta não é possível neste momento. Por favor, volte mais tarde.</p>');
-$tpl->Write('<p>Você pode optar pelo manual - Clicando <a href="mailto:%StaffEmail%">aqui</a></p>');
+$tpl->Write('<p>Desculpe, mas a recuperaï¿½ï¿½o de conta nï¿½o ï¿½ possï¿½vel neste momento. Por favor, volte mais tarde.</p>');
+$tpl->Write('<p>Vocï¿½ pode optar pelo manual - Clicando <a href="mailto:%StaffEmail%">aqui</a></p>');
 $tpl->AddGeneric('process-template-bottom');
 $tpl->AddGeneric('footer');
 

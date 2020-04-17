@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -46,7 +46,7 @@ if (isset($_POST['username']))
 	}
 	else
 	{
-		fMessage('error', 'Não foi possível encontrar o usuário.');
+		fMessage('error', 'Nï¿½o foi possï¿½vel encontrar o usuï¿½rio.');
 	}
 }
 
@@ -56,14 +56,14 @@ echo '<h1>Login external</h1>';
 
 if ($popClient != '')
 {
-	echo "<input type=\"button\" onclick=\"popSsoClient('" . $popClient . "'); window.location = 'index.php?_cmd=extsignon'\" value=\"SSO TICKET criado. Você está conectado como " . $username . "\" style=\"margin: 20px; font-size: 150%;\">";
+	echo "<input type=\"button\" onclick=\"popSsoClient('" . $popClient . "'); window.location = 'index.php?_cmd=extsignon'\" value=\"SSO TICKET criado. Vocï¿½ estï¿½ conectado como " . $username . "\" style=\"margin: 20px; font-size: 150%;\">";
 	echo '<input type="button" value="Voltar" onclick="window.location = \'index.php?_cmd=extsignon\';">';
 }
 else
 {
-	echo '<br /><p>Esta ferramenta, possibilita entrar em outras contas e visualizar se ela tem uma quantia a mais de moedas. Também funciona para ajudar membros que estão tendo problemas.</p><br />';
+	echo '<br /><p>Esta ferramenta, possibilita entrar em outras contas e visualizar se ela tem uma quantia a mais de moedas. Tambï¿½m funciona para ajudar membros que estï¿½o tendo problemas.</p><br />';
 	echo '<form method="post">
-	Usuário: <input type="text" name="username" value=""><input type="submit" value="Entrar">
+	Usuï¿½rio: <input type="text" name="username" value=""><input type="submit" value="Entrar">
 	</form>';
 }
 

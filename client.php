@@ -1,19 +1,21 @@
 <?php
 /*=======================================================================
-| Dayvso CMS - Leve sistema local para CMS
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2011, By 'dayvson1112'
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
-| Este programa é software livre: você pode redistribuí-lo e / ou modificar
-| Lo sob os termos da GNU General Public License como publicado pela
-| A Free Software Foundation, tanto a versão 3 da Licença, ou
-| (em sua opção) qualquer versão posterior.
+| This program is free software: you can redistribute it and/or modify
+| it under the terms of the GNU General Public License as published by
+| the Free Software Foundation, either version 3 of the License, or
+| (at your option) any later version.
 | #######################################################################
-| Este programa é distribuído na esperança que possa ser útil,
-| mas SEM NENHUMA GARANTIA, nem mesmo a garantia implícita de
-| COMERCIALIZAÇÃO ou ADEQUAÇÃO PARA UM DETERMINADO PROPÓSITO. Veja o
-| GNU General Public License para mais detalhes.
+| This program is distributed in the hope that it will be useful,
+| but WITHOUT ANY WARRANTY; without even the implied warranty of
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+| GNU General Public License for more details.
 \======================================================================*/
+
 define('HIDE_FEEDBACK', true);
 
 require_once "global.php";
@@ -109,7 +111,7 @@ $client->SetParam('page_title', ' ');
 $client->SetParam('sso_ticket', $users->GetUserVar(USER_ID, 'auth_ticket', false));
 $client->SetParam('flash_base', 'http://www.swfs.host.crazzy.com.br/swf/r63/gordon/r_63/');
 $client->SetParam('flash_client_url', 'http://www.swfs.host.crazzy.com.br/swf/r63/gordon/r_63/');
-$client->SetParam('hotel_status', $core->GetUsersOnline() . ' Usuários online agora!');
+$client->SetParam('hotel_status', $core->GetUsersOnline() . ' Usuï¿½rios online agora!');
 $client->SetParam('forwardType', $forwardType);
 $client->SetParam('forwardId', $forwardId);
 

@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -30,7 +30,7 @@ if (isset($_GET['new']))
 {
 	dbquery("INSERT INTO moderation_presets (type,enabled,message) VALUES ('message','0','Newly generated preset - please update')");
 	
-	fMessage('ok', 'Nova configuração adicionada.');
+	fMessage('ok', 'Nova configuraï¿½ï¿½o adicionada.');
 	
 	header("Location: index.php?_cmd=presets");
 	exit;
@@ -42,7 +42,7 @@ if (isset($_GET['delete']) && is_numeric($_GET['delete']))
 	
 	if (mysql_affected_rows() >= 1)
 	{
-		fMessage('ok', 'Configuração deletada.');
+		fMessage('ok', 'Configuraï¿½ï¿½o deletada.');
 	}
 	
 	header("Location: index.php?_cmd=presets");
@@ -60,7 +60,7 @@ if (isset($_POST['preset-save']) && is_numeric($_POST['preset-save']))
 	
 	if (mysql_affected_rows() >= 1)
 	{
-		fMessage('ok', 'Configuração atualizada.');
+		fMessage('ok', 'Configuraï¿½ï¿½o atualizada.');
 	}
 }
 
@@ -68,9 +68,9 @@ require_once "top.php";
 
 ?>			
 
-<h1>Configurações</h1>
+<h1>Configuraï¿½ï¿½es</h1>
 
-<h2>MOD TOOL ! Você pode configurar aqui, todos os comandos do MOD TOOLS do Hotel !</h2>
+<h2>MOD TOOL ! Vocï¿½ pode configurar aqui, todos os comandos do MOD TOOLS do Hotel !</h2>
 <br />
 
 <table width="100%" border="1" >
@@ -79,7 +79,7 @@ require_once "top.php";
 	<td>Tipo</td>
 	<td>Ativado</td>
 	<td>Mensagem</td>
-	<td>Opção</td>
+	<td>Opï¿½ï¿½o</td>
 </thead>
 <tbody>
 <?php
@@ -92,7 +92,7 @@ while ($p = mysql_fetch_assoc($get))
 	echo '<form method="post">';
 	echo '<input type="hidden" name="preset-save" value="' . $p['id'] . '">';
 	echo '<td>#' . $p['id'] . '</td>';
-	echo '<td><select name="type"><option value="message">Mensagem para o usuário (amigável)</option><option value="roommessage"';
+	echo '<td><select name="type"><option value="message">Mensagem para o usuï¿½rio (amigï¿½vel)</option><option value="roommessage"';
 	
 	if ($p['type'] == "roommessage")
 	{
@@ -130,7 +130,7 @@ while ($p = mysql_fetch_assoc($get))
 	<br /><br />
 	
 	<i style="color: darkred;">
-		NOTA: Após você adicionar esse comando aqui, será necessário reiniciar o hotel para ser visualizado.
+		NOTA: Apï¿½s vocï¿½ adicionar esse comando aqui, serï¿½ necessï¿½rio reiniciar o hotel para ser visualizado.
 	</i>
 </center>
 

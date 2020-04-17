@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -32,14 +32,14 @@ require_once "top.php";
 
 <div style="margin: 25px;">
 <center>
-	<b style="font-size: 18px;">Página não encontrada.</b>
+	<b style="font-size: 18px;">Pï¿½gina nï¿½o encontrada.</b>
 	
 	<p>
-		A página foi removida ou não existe !
+		A pï¿½gina foi removida ou nï¿½o existe !
 	</p>
 	
 	<p>
-		Se você encontrou algum bug, por favor, crie um tópico na área de <a href="index.php?_cmd=forum">discução</a>.
+		Se vocï¿½ encontrou algum bug, por favor, crie um tï¿½pico na ï¿½rea de <a href="index.php?_cmd=forum">discuï¿½ï¿½o</a>.
 	</p>
 	
 </center>

@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -35,13 +35,13 @@ require_once "top.php";
 <br />
 
 <p>
-	Está é a página inicial da administração. Você pode navegar na administração clicando nos links que se encontra a esquerda.
+	Estï¿½ ï¿½ a pï¿½gina inicial da administraï¿½ï¿½o. Vocï¿½ pode navegar na administraï¿½ï¿½o clicando nos links que se encontra a esquerda.
 </p>
 
 <br />
 
 <p>
-	Parabéns <b><?php if (LOGGED_IN) { echo USER_NAME; } ?></b> ! Você é um membro da equipe do Habbo Hotel.
+	Parabï¿½ns <b><?php if (LOGGED_IN) { echo USER_NAME; } ?></b> ! Vocï¿½ ï¿½ um membro da equipe do Habbo Hotel.
 </p>
 
 <br />
@@ -60,7 +60,7 @@ require_once "top.php";
 		
 		<b style="color: green; font-size: 120%;">
 
-			<b><?php if (LOGGED_IN) { echo USER_NAME; } ?></b>, caso você tenha alguma proposta para nós, reclamações de nossos usuários, visite o <a href="/manage/index.php?_cmd=forum">Fórum de discuções</a>. Crie um tópico e aguarde por <b>respostas</b> !
+			<b><?php if (LOGGED_IN) { echo USER_NAME; } ?></b>, caso vocï¿½ tenha alguma proposta para nï¿½s, reclamaï¿½ï¿½es de nossos usuï¿½rios, visite o <a href="/manage/index.php?_cmd=forum">Fï¿½rum de discuï¿½ï¿½es</a>. Crie um tï¿½pico e aguarde por <b>respostas</b> !
 		</b>
 	
 </p>
@@ -71,7 +71,7 @@ require_once "top.php";
 		
 		<b style="color: black; font-size: 120%;">
 
-			<?php if (LOGGED_IN) { echo USER_NAME; } ?>, nunca, jamais dê códigos de Habbo Moedas para:<br><br>-  Novatos<br>- Membros incoerentes <br>- Desconhecidos<br><br>Somente dê moedas para:<br><br>- Membros com saldos negativos<br>- Moedas esgotadas<br>- Vencedor de eventos e promoções.
+			<?php if (LOGGED_IN) { echo USER_NAME; } ?>, nunca, jamais dï¿½ cï¿½digos de Habbo Moedas para:<br><br>-  Novatos<br>- Membros incoerentes <br>- Desconhecidos<br><br>Somente dï¿½ moedas para:<br><br>- Membros com saldos negativos<br>- Moedas esgotadas<br>- Vencedor de eventos e promoï¿½ï¿½es.
 		</b>
 		
 	</a>
@@ -88,7 +88,7 @@ require_once "top.php";
 	<div style="padding: 5px;">
 	
 		<p>
-			Caso tenha alguma dúvida, emergência, bugs, veja os e-mails abaixo:
+			Caso tenha alguma dï¿½vida, emergï¿½ncia, bugs, veja os e-mails abaixo:
 		</p>
 		
 		<br />

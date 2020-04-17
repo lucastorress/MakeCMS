@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -37,12 +37,12 @@ if (isset($_POST['content']))
 	
 	if (strlen($seoUrl) < 1 || strlen($title) < 1 || strlen($teaser) < 1 || strlen($content) < 1)
 	{
-		fMessage('error', 'Não deixe espaços em branco.');
+		fMessage('error', 'Nï¿½o deixe espaï¿½os em branco.');
 	}
 	else
 	{
 		dbquery("INSERT INTO site_news (title,category_id,seo_link,topstory_image,body,snippet,datestr,timestamp) VALUES ('" . $title . "','" . $category . "','" . $seoUrl . "','" . $topstory . "','" . $content . "','" . $teaser . "','" . date('d-M-Y') . "', '" . time() . "')");
-		fMessage('ok', 'Notícia publicada.');
+		fMessage('ok', 'Notï¿½cia publicada.');
 		
 		header("Location: index.php?_cmd=news");
 		exit;
@@ -77,14 +77,14 @@ function suggestSEO(el)
 }
 </script>
 
-<h1>Publicar notícia</h1>
+<h1>Publicar notï¿½cia</h1>
 <form method="post">
 
 <br />
 
 <div style="float: left;">
 
-<strong>Título da notícia:</strong><br />
+<strong>Tï¿½tulo da notï¿½cia:</strong><br />
 <input type="text" value="<?php if (isset($_POST['title'])) { echo clean($_POST['title']); } ?>" name="title" size="50" onkeyup="suggestSEO(this.value);" style="padding: 5px; font-size: 130%;"><br />
 <br />
 
@@ -103,11 +103,11 @@ while ($option = mysql_fetch_assoc($getOptions))
 </select><br />
 <br />
 
-<strong>Link da notícia:</strong><br />
+<strong>Link da notï¿½cia:</strong><br />
 <div style="border: 1px dotted; width: 300px; padding: 5px;">
 <?php echo WWW; ?>/[id]-<input type="text" id="url" name="url" value="<?php if (isset($_POST['url'])) { echo clean($_POST['url']); } ?>" maxlength="120">/<br />
 </div>
-<small>Esta é uma sugestão automatica. <b>Não altere !</b></small><br />
+<small>Esta ï¿½ uma sugestï¿½o automatica. <b>Nï¿½o altere !</b></small><br />
 <br />
 
 <strong>Texto curto (Um pequeno texto):</strong><br />
@@ -146,7 +146,7 @@ while ($option = mysql_fetch_assoc($getOptions))
 
 <div id="ts-preview" style="margin-left: 20px; padding: 10px; float: left; text-align: center; vertical-align: middle;">
 
-	<small>(Selecione uma imagem, ela será exibida aqui)</small>
+	<small>(Selecione uma imagem, ela serï¿½ exibida aqui)</small>
 
 </div>
 

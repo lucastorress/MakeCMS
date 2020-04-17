@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -38,12 +38,12 @@ if (isset($_POST['msg']))
 	
 	if (strlen($body) < 20)
 	{
-		die("Mensagem muito curta. Digite algo sério !");
+		die("Mensagem muito curta. Digite algo sï¿½rio !");
 	}
 	
 	dbquery("INSERT INTO moderation_forum_threads (subject,message,poster,date,timestamp) VALUES ('" . filter($subject) . "','" . filter($body) . "','" . HK_USER_NAME . "','" . date('j F Y h:i A') . "','" . time() . "')");
 	
-	fMessage('ok', 'Tópico criado');
+	fMessage('ok', 'Tï¿½pico criado');
 	
 	header("Location: index.php?_cmd=forum");
 	exit;
@@ -53,10 +53,10 @@ require_once "top.php";
 
 ?>			
 
-<h1>Fórum de discução</h1>
+<h1>Fï¿½rum de discuï¿½ï¿½o</h1>
 
 <p>
-	Use o fórum de discução para nos ajudar reportando bugs, erros, entre outros. Aqui você pode debater e interagir com outros usuários da nossa equipe. Basta criar um tópico que a nossa gerência irá responder.
+	Use o fï¿½rum de discuï¿½ï¿½o para nos ajudar reportando bugs, erros, entre outros. Aqui vocï¿½ pode debater e interagir com outros usuï¿½rios da nossa equipe. Basta criar um tï¿½pico que a nossa gerï¿½ncia irï¿½ responder.
 </p>
 
 <?php
@@ -72,12 +72,12 @@ if (mysql_num_rows($getTopics) >= 1)
 		
 		if ($topic['locked'] >= 1)
 		{
-			echo '<img src="images/locked.gif" alt="Locked" title="Tópico fechado" style="vertical-align: middle;">&nbsp;';
+			echo '<img src="images/locked.gif" alt="Locked" title="Tï¿½pico fechado" style="vertical-align: middle;">&nbsp;';
 		}		
 		
 		if ($topic['timestamp'] >= 99999999999)
 		{
-			echo '<img src="images/sticky.gif" alt="Sticky" title="Tópico fixo" style="vertical-align: middle;">&nbsp;';
+			echo '<img src="images/sticky.gif" alt="Sticky" title="Tï¿½pico fixo" style="vertical-align: middle;">&nbsp;';
 		}
 		
 		echo clean($topic['subject']) . '</b>&nbsp;';
@@ -106,13 +106,13 @@ if (mysql_num_rows($getTopics) >= 1)
 }
 else
 {
-	echo '<br /><center><b><i>Até agora não foi postado nenhum tópico.</b></i></center><br />';
+	echo '<br /><center><b><i>Atï¿½ agora nï¿½o foi postado nenhum tï¿½pico.</b></i></center><br />';
 }
 
 ?>
 
 <h2 id="cn-link">
-	<a href="#" onclick="t('cn-link'); t('cn-form'); return false">Criar novo tópico</a>
+	<a href="#" onclick="t('cn-link'); t('cn-form'); return false">Criar novo tï¿½pico</a>
 </h2>
 
 <h2 id="cn-form" style="display: none;">

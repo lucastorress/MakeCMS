@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -98,19 +98,19 @@ require_once "top.php";
 <h1>Pedidos de ajuda</h1>
 
 <p>
-	Essa página, você pode visualizar todos os pedidos de ajuda.
+	Essa pï¿½gina, vocï¿½ pode visualizar todos os pedidos de ajuda.
 </p>
 
 <br />
 
 <p>
-	<b>Aqui você pode visualizar todos os pedidos de ajuda. Mais que elas possam ser efetuadas, usem o MOD TOOLS que se encontra no Hotel.</b>
+	<b>Aqui vocï¿½ pode visualizar todos os pedidos de ajuda. Mais que elas possam ser efetuadas, usem o MOD TOOLS que se encontra no Hotel.</b>
 </p>
 
 <br />
 
 <p>
-	<small>** Este painel tem como a função de mostrar os pedidos de ajuda enquanto nenhum moderador estava online.</small>
+	<small>** Este painel tem como a funï¿½ï¿½o de mostrar os pedidos de ajuda enquanto nenhum moderador estava online.</small>
 </p>
 
 <br />
@@ -120,8 +120,8 @@ require_once "top.php";
 	<td>ID</td>
 	<td>Tipo</td>
 	<td>Status</td>
-	<td>Usuário</td>
-	<td>Usuário reportado</td>
+	<td>Usuï¿½rio</td>
+	<td>Usuï¿½rio reportado</td>
 	<td>Moderador</td>
 	<td>Mensagem</td>
 	<td>Quarto</td>

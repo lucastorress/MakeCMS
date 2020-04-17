@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@ if (isset($_GET['doDel']) && is_numeric($_GET['doDel']))
 	
 	if (mysql_affected_rows() >= 1)
 	{
-		fMessage('ok', 'Notícia deletada.');
+		fMessage('ok', 'Notï¿½cia deletada.');
 	}
 	
 	header("Location: index.php?_cmd=news&deleteOK");
@@ -45,7 +45,7 @@ if (isset($_GET['doBump']) && is_numeric($_GET['doBump']))
 	
 	if (mysql_affected_rows() >= 1)
 	{
-		fMessage('ok', 'Notícia atualizada.');
+		fMessage('ok', 'Notï¿½cia atualizada.');
 	}
 	
 	header("Location: index.php?_cmd=news&bumpOK");
@@ -61,7 +61,7 @@ require_once "top.php";
 <br />
 
 <p>
-	Está página administra as notícias. As notícias que estão com o fundo desta <span style="background-color: #008000; padding: 2px;">cor</span>, estão ativadas e pode ser visualizadas no site principal.
+	Estï¿½ pï¿½gina administra as notï¿½cias. As notï¿½cias que estï¿½o com o fundo desta <span style="background-color: #008000; padding: 2px;">cor</span>, estï¿½o ativadas e pode ser visualizadas no site principal.
 </p>
 
 <br />
@@ -69,7 +69,7 @@ require_once "top.php";
 <p>
 	<a href="index.php?_cmd=newspublish">
 		<b>
-			Escrever nova notícia
+			Escrever nova notï¿½cia
 		</b>
 	</a>
 </p>
@@ -80,7 +80,7 @@ require_once "top.php";
 <thead>
 <tr>
 	<td>ID</td>
-	<td>Título</td>
+	<td>Tï¿½tulo</td>
 	<td>Texto curto</td>
 	<td>Categoria</td>
 	<td>Data</td>

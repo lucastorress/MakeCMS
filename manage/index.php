@@ -1,14 +1,19 @@
 <?php
 /*=======================================================================
-| WareCMS - Sistema avançado de Administração de CMS
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Lucas Reis & Dcr-Host
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
-| Este programa é um FreeSoftware aonde você pode editar os conteúdos
-| com os direitos autorais do editor.
+| This program is free software: you can redistribute it and/or modify
+| it under the terms of the GNU General Public License as published by
+| the Free Software Foundation, either version 3 of the License, or
+| (at your option) any later version.
 | #######################################################################
-| Este programa foi editado traduzido por Lucas Reis, créditos totais
-| para Meth0d, autor original do programa.
+| This program is distributed in the hope that it will be useful,
+| but WITHOUT ANY WARRANTY; without even the implied warranty of
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+| GNU General Public License for more details.
 \======================================================================*/
 
 
@@ -36,7 +41,7 @@ if ($_cmd == null)
 	if (!HK_LOGGED_IN)
 	{
 		$initial = 'login';
-		$_SESSION['HK_LOGIN_ERROR'] = "Nenhuma sessão no Painel de Controle encontrada.";
+		$_SESSION['HK_LOGIN_ERROR'] = "Nenhuma sessï¿½o no Painel de Controle encontrada.";
 	}
 
 	header("Location: " . HK_WWW . "/index.php?_cmd=" . $initial);
@@ -71,7 +76,7 @@ switch($_cmd)
 		session_destroy();
 		session_start();
 		
-		$_SESSION['HK_LOGIN_ERROR'] = "Você se desconectou com sucesso.";
+		$_SESSION['HK_LOGIN_ERROR'] = "Vocï¿½ se desconectou com sucesso.";
 		
 		header("Location: ./index.php?_cmd=login");
 		exit;

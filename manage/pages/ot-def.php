@@ -1,9 +1,9 @@
 <?php
 /*=======================================================================
-| UberCMS - Advanced Website and Content Management System for uberEmu
+| MakeCMS - A content management system for Habbo retro based on UberCMS
 | #######################################################################
-| Copyright (c) 2010, Roy 'Meth0d' and updates by Matthew 'MDK'
-| http://www.meth0d.org & http://www.sulake.biz
+| Copyright (c) 2010, Roy 'Meth0d' & Lucas Torres (https://github.com/lucastorress)
+| http://www.meth0d.org / https://www.sulake.com
 | #######################################################################
 | This program is free software: you can redistribute it and/or modify
 | it under the terms of the GNU General Public License as published by
@@ -44,7 +44,7 @@ if (!isset($_GET['sq']))
 if (isset($_GET['new']))
 {
 	dbquery("INSERT INTO furniture (public_name,item_name,type,length,width,stack_height,can_stack,sprite_id,interaction_type) VALUES ('','newitem', 's', '1', '1', '1', '1', '1', 'switch')");
-	fMessage('ok', 'Nova definição de item adicionada');
+	fMessage('ok', 'Nova definiï¿½ï¿½o de item adicionada');
 	
 	$newId = mysql_result(dbquery("SELECT id FROM furniture ORDER BY id DESC LIMIT 1"), 0);
 		
@@ -54,7 +54,7 @@ if (isset($_GET['new']))
 
 if (isset($_GET['del']))
 {
-	fMessage('error', 'Você têm <b>certeza</b> que deseja deletar a definição deste item ? Isto não pode se reverter.<br /><a href="index.php?_cmd=ot-def&realdel=' . $_GET['del'] . '&sq=' . $_GET['sq'] . '">SIM, DELETAR</a> - ou - <a href="index.php?_cmd=ot-def">CANCELAR</a>');
+	fMessage('error', 'Vocï¿½ tï¿½m <b>certeza</b> que deseja deletar a definiï¿½ï¿½o deste item ? Isto nï¿½o pode se reverter.<br /><a href="index.php?_cmd=ot-def&realdel=' . $_GET['del'] . '&sq=' . $_GET['sq'] . '">SIM, DELETAR</a> - ou - <a href="index.php?_cmd=ot-def">CANCELAR</a>');
 }
 
 if (isset($_GET['realdel']))
@@ -75,7 +75,7 @@ if (isset($_GET['edit']))
 	
 	if (mysql_num_rows($get) == 0)
 	{
-		fMessage('error', 'Opa ! Item inválido.');
+		fMessage('error', 'Opa ! Item invï¿½lido.');
 	}
 	else
 	{
@@ -123,7 +123,7 @@ if (isset($_GET['edit']))
 
 require_once "top.php";
 
-echo '<h1>Administrar definições de itens</h1>';
+echo '<h1>Administrar definiï¿½ï¿½es de itens</h1>';
 
 ?>
 
@@ -227,14 +227,14 @@ if (mysql_num_rows($checkBlankItems) > 0)
 {
 	echo '<div style="margin: 5px; padding: 10px; border: 2px solid #000; color: darkred;">';
 	echo '<p>';
-	echo '<b>Aviso!</b> Tem espaços em brancos no banco de dados:<br />';
+	echo '<b>Aviso!</b> Tem espaï¿½os em brancos no banco de dados:<br />';
 	echo '<ul class="styled">';
 	
 	while ($item = mysql_fetch_assoc($checkBlankItems))
 	{
 		if (isset($_GET['edit']) && $item['id'] == $_GET['edit'])
 		{
-			echo '<li><i>Atualmente você está editando o item (ID #' . $item['id'] . ').</i></li>';
+			echo '<li><i>Atualmente vocï¿½ estï¿½ editando o item (ID #' . $item['id'] . ').</i></li>';
 		}
 		else
 		{
@@ -255,7 +255,7 @@ if ($data != null)
 	echo '<form method="post" action="index.php?_cmd=ot-def&edit=' . $data['id'] . '&sq=' . $_GET['sq'] . '">';
 	echo '<input type="hidden" name="search-query" value="' . $_GET['sq'] . '">';
 	echo '<div style="margin: 10px; padding: 10px; border: 1px dotted #000;">';
-	echo 'Inserir bloco mágico aqui:<br /><textarea id="magicinput"></textarea><br /><input type="button" onclick="MagicBlockProcessor(document.getElementById(\'magicinput\').value);" value="Deixe em branco aqui">';
+	echo 'Inserir bloco mï¿½gico aqui:<br /><textarea id="magicinput"></textarea><br /><input type="button" onclick="MagicBlockProcessor(document.getElementById(\'magicinput\').value);" value="Deixe em branco aqui">';
 	echo '</div>';
 	
 	foreach ($data as $key => $value)
@@ -294,22 +294,22 @@ else
 		
 		$getPages = dbquery("SELECT * FROM furniture WHERE item_name LIKE '%" . $_POST['search-query'] . "%' OR public_name LIKE '%" . $_POST['search-query'] . "%' OR id = '" . $_POST['search-query'] . "'");					
 
-		echo '<a href="index.php?_cmd=ot-def&new"><b>Gerar nova definição</b></a><br /><br />';
+		echo '<a href="index.php?_cmd=ot-def&new"><b>Gerar nova definiï¿½ï¿½o</b></a><br /><br />';
 		
 		echo '<table width="100%" border="1" style="text-align: center;">
 		<thead style="font-weight: bold; font-size: 110%;">
 			<td>ID</td>
-			<td>Nome público</td>
+			<td>Nome pï¿½blico</td>
 			<td>Nome interno</td>
 			<td>Tipo</td>
-			<td>Tipo de interação</td>
-			<td>Opções</td>
-			<td>Está no catálogo</td>
+			<td>Tipo de interaï¿½ï¿½o</td>
+			<td>Opï¿½ï¿½es</td>
+			<td>Estï¿½ no catï¿½logo</td>
 		</thead>';
 
 		while ($page = mysql_fetch_assoc($getPages))
 		{
-			$res = '<b style="color: darkred;">NÃO</b>';
+			$res = '<b style="color: darkred;">Nï¿½O</b>';
 		
 			if (mysql_num_rows(dbquery("SELECT null FROM catalog_items WHERE item_ids = '" . $page['id'] . "' LIMIT 1")) >= 1)
 			{
@@ -340,7 +340,7 @@ else
 	}
 }
 
-echo '<a href="index.php?_cmd=ot-def&new"><b>Gerado nova definição do item</b></a>';
+echo '<a href="index.php?_cmd=ot-def&new"><b>Gerado nova definiï¿½ï¿½o do item</b></a>';
 
 echo '</div>
 </div>';
